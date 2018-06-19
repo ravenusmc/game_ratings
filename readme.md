@@ -1,4 +1,4 @@
-# Hate_crimes
+# Game_ratings
 ## Intro
 
 Originally, I intended to do this project based off metacritics game site. However, they block web scraping so I had to find some data on Kaggle. 
