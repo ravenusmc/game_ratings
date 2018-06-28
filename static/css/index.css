@@ -1,0 +1,25 @@
+/* The CSS in this file will cover the home page */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+  'nav main_image main_image'
+  'nav main_image main_image'
+  'nav left_image right_image';
+}
+
+nav {
+  grid-area: nav;
+}
+
+.main_image {
+  grid-area: main_image;
+}
+
+.left_image {
+  grid-area: left_image;
+}
+
+.right_image {
+  grid-area: right_image;
+}
