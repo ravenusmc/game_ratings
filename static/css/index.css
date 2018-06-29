@@ -88,20 +88,8 @@ CSS for media Queries
     'main_image'
     'nav'
     'right_image'
-    'right_image';
+    'left_image';
   }
-
-  .main_image {
-    width: 350px;
-  }
-
-  nav {
-    width: 350px;
-  }
-
-/*  .right_image {
-    height: 350px;
-  }*/
 
 }
 
