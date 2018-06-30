@@ -3,7 +3,7 @@
 
 Originally, I intended to do this project based off metacritics game site. However, they block web scraping so I had to find some data on Kaggle. 
 
-As stated, the data may be found at Kaggle at the following link: 
+As stated, the data may be found at Kaggle at the following link: https://www.kaggle.com/gregorut/videogamesales
 
 
 # Getting started
