@@ -1,7 +1,7 @@
 # Game_ratings
 ## Intro
 
-Originally, I intended to do this project based off metacritics game site. However, they block web scraping so I had to find some data on Kaggle. 
+This project should end up having two main parts. The first part will analyze video games from a data set that I pulled off of Kaggle. This data will essentially all the user to look at graphs to see what was the best video game by year. The second part of the project, as it's planned now, is to web scrape metacritic so that a user will be able to see a games mean and the standard deviation of its score. 
 
 As stated, the data may be found at Kaggle at the following link: https://www.kaggle.com/gregorut/videogamesales
 
