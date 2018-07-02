@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+
+<!-- Main div that will contain the rest of the page -->
+<div class='container'>
+
+  <nav role='Navigation'>
+    <ul>
+      <li><a class='enter_link'>Enter</a></li>
+    </ul>
+  </nav>
+
+  <section class='main_image' role='Banner'>
+
+    <div>
+      <h3 class='home_page_title'>Analyzing Games</h3>
+    </div>
+
+  </section>
+
+  <section class='left_image'>
+
+  </section>
+
+  <section class='right_image'>
+
+  </section>
+
+</div>
+<!-- End of the main div -->
+
+{% endblock %}
