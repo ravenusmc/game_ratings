@@ -3,11 +3,15 @@
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  position:fixed;
+  padding:0;
+  margin:0;
+  width: 100%;
+  height: 100%;
 }
 
 .picture_one {
   background-image: url('../img/gamer.jpg');
-  height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -19,7 +23,6 @@ main {
 
 .picture_two {
   background-image: url('../img/ps4.jpg');
-  height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -34,4 +37,25 @@ main {
   color: white;
   padding: 15px;
   border-radius: 12px;
+}
+
+h1 > a {
+  text-decoration: none;
+}
+
+h1 > a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+@media only all and (max-width: 768px) {
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    h1 > a {
+      font-size: 30px;
+    }
 }
