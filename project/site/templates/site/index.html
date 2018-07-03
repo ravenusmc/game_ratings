@@ -8,7 +8,7 @@
 
   <nav role='Navigation'>
     <ul>
-      <li><a class='enter_link'>Enter</a></li>
+      <li><a class='enter_link' href="{{ url_for('site.home') }}">Enter</a></li>
     </ul>
   </nav>
 
@@ -31,4 +31,5 @@
 </div>
 <!-- End of the main div -->
 
+<!-- <script src='{{ url_for('static', filename='js/index.js') }}'></script> -->
 {% endblock %}
