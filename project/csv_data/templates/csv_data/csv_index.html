@@ -2,6 +2,26 @@
 
 {% block content %}
 
-<h1>CSV TEST</h1>
+<h1>CSV DATA PAGE</h1>
 
+<!-- Start of main section -->
+<main role='Main'>
+
+  <section>
+
+    <div>
+      <h1>Search for Max Rating for Genre and Year</h1>
+      <h4>Please enter a year 1930-2000</h4>
+      <p>Enter Year:<input type="text" id='year' size="10" name='year'></p>
+      <p>Enter Genre:<input type="text" id='genre' size="10" name='genre'></p>
+      <p>Result: <span id="max_rating_results">?</span></p>
+      <p><a onclick="validateYear()" href=# id="year">Return Max Rating</a></p>
+    </div>
+
+  </section>
+
+</main>
+<!-- End of main section -->
+
+<script src='{{ url_for('static', filename='js/csvData.js') }}'></script>
 {% endblock %}
