@@ -12,10 +12,11 @@ import pandas as pd
 class Data():
 
     def __init__(self):
-        self.game_data = pd.read_csv('.data/Video_Games_Sales.csv')
+        self.game_data = pd.read_csv('data/Video_Games_Sales.csv')
 
     def test(self):
         print(self.game_data.head())
+
 
 
 
