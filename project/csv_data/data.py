@@ -11,12 +11,17 @@ import pandas as pd
 
 class Data():
 
-    def __init__(self):
-        self.game_data = pd.read_csv('data/Video_Games_Sales.csv')
+    # def __init__(self):
+    #     self.game_data = pd.read_csv('data/Video_Games_Sales.csv')
 
-    def test(self):
+    def get_rating_based_year_genre(self):
         print(self.game_data.head())
 
+    def test(self):
+        print('mike')
+
+# data = Data()
+# data.get_rating_based_year_genre()
 
 
 
