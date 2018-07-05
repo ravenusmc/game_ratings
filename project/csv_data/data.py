@@ -18,7 +18,7 @@ class Data():
         print(self.game_data.head())
 
     def test(self):
-        print('mike')
+        print('The test method is working')
 
 # data = Data()
 # data.get_rating_based_year_genre()

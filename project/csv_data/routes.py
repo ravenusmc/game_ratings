@@ -16,8 +16,8 @@ def homepage():
 #This route will deal with getting the max rating of a video game by year and genre 
 @mod.route('/_by_max_rating')
 def by_state_shape():
-    # data = Data() 
-    # data.test()
+    data = Data() 
+    data.test()
     # data.get_rating_based_year_genre()
 
     # game_data = pd.read_csv('./csv_data/Video_Games_Sales.csv')
