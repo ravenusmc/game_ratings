@@ -14,11 +14,11 @@ class Data():
     # def __init__(self):
     #     self.game_data = pd.read_csv('data/Video_Games_Sales.csv')
 
-    def get_rating_based_year_genre(self):
-        print(self.game_data.head())
+    def get_rating_based_year_genre(self, data):
+        print(data.head())
 
-    def test(self):
-        print('The test method is working')
+    # def test(self):
+    #     print('The test method is working')
 
 # data = Data()
 # data.get_rating_based_year_genre()
