@@ -15,6 +15,7 @@ class Data():
         year = float(year)
         #Getting rid of all the NA values 
         data = data.dropna()
+        print(data.Genre.unique())
         #Sorting the DF by the genre and years that were entered in by the user
         data = data[(data.Genre == genre) & (data.Year_of_Release == year)]
         #print(data.head())
@@ -22,6 +23,7 @@ class Data():
         max_rating = data.max()
         #getting the title from the series 
         game_title = max_rating[0]
+
         return game_title
         
 

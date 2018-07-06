@@ -20,6 +20,8 @@ def homepage():
 def by_state_shape():
     year = request.args.get('year', 0, type=int)
     genre = request.args.get('genre', 0, type=str)
+    print(year)
+    print(genre)
     #Creating a data object to interact with the data class which 
     #handles the data. 
     data = Data() 

@@ -20,7 +20,8 @@ $(function() {
         //The /_by_state is the method that you will use.
       $.getJSON($SCRIPT_ROOT + '/_by_max_rating', {
         year: $('input[name="year"]').val(),
-        genre: $('input[name="genre"]').val()
+        genre: $('#genre').val()
+        // genre: $('input[name="genre"]').val()
       }, function(data) {
         //This is where the data will be displayed.
         $('#max_rating_results').text(data.result);

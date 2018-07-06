@@ -1,11 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/csv_index.css') }}">
 
 <h1>CSV DATA PAGE</h1>
 
 <!-- Start of main section -->
 <main role='Main'>
+
+  <div>
+    <h1>Analyzing CSV Data</h1>
+  </div>
 
   <section>
 
@@ -13,7 +18,11 @@
       <h1>Search for Max Rating for Genre and Year</h1>
       <h4>Please enter a year 1930-2000</h4>
       <p>Enter Year:<input type="text" id='year' size="10" name='year'></p>
-      <p>Enter Genre:<input type="text" id='genre' size="10" name='genre'></p>
+      <select id='genre' name='genre'>
+        <option value='Sports'>Sports</option>
+        <option value='Racing'>Racing</option>
+      </select>
+<!--       <p>Enter Genre:<input type="text" id='genre' size="10" name='genre'></p> -->
       <p>Result: <span id="max_rating_results">?</span></p>
       <p><a onclick="validateYear()" href=# id="max_rating">Return Max Rating</a></p>
     </div>
@@ -25,3 +34,6 @@
 
 <script src='{{ url_for('static', filename='js/csvData.js') }}'></script>
 {% endblock %}
+
+<!-- ['Sports' 'Racing' 'Platform' 'Misc' 'Action' 'Puzzle' 'Shooter'
+ 'Fighting' 'Simulation' 'Role-Playing' 'Adventure' 'Strategy'] -->
