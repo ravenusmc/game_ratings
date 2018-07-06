@@ -11,17 +11,24 @@ import pandas as pd
 
 class Data():
 
-    # def __init__(self):
-    #     self.game_data = pd.read_csv('data/Video_Games_Sales.csv')
+    def get_rating_based_year_genre(self, data, year, genre):
+        year = float(year)
+        #Getting rid of all the NA values 
+        data = data.dropna()
+        #Sorting the DF by the genre and years that were entered in by the user
+        data = data[(data.Genre == genre) & (data.Year_of_Release == year)]
+        #print(data.head())
+        #Now getting the max rating 
+        max_rating = data.max()
+        #getting the title from the series 
+        game_title = max_rating[0]
+        return game_title
+        
 
-    def get_rating_based_year_genre(self, data):
-        print(data.head())
 
-    # def test(self):
-    #     print('The test method is working')
+#checking the datatype:
+#print(data.dtypes)
 
-# data = Data()
-# data.get_rating_based_year_genre()
 
 
 
