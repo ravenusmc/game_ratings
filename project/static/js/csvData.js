@@ -14,6 +14,8 @@ function validateYear() {
 }
 
 //The functions below will deal with the jquery on the page 
+
+//This function deals with the max ratings area
 $(function() {
 
     var submit_form = function(e) {
@@ -30,4 +32,21 @@ $(function() {
     };
     //This is what will submit the form when the user clicks the link.
     $('a#max_rating').bind('click', submit_form);
+});
+
+//This function deals with the max earnings area.
+$(function() {
+
+    var submit_form = function(e) {
+        //The /_by_state is the method that you will use.
+      $.getJSON($SCRIPT_ROOT + '/_by_max_earnings', {
+        genre: $('#genre_max_earnings').val()
+      }, function(data) {
+        //This is where the data will be displayed.
+        $('#max_earnings_results').text(data.result);
+      });
+      return false;
+    };
+    //This is what will submit the form when the user clicks the link.
+    $('a#max_earnings').bind('click', submit_form);
 });

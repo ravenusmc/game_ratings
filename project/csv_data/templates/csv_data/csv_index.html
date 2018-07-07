@@ -15,15 +15,15 @@
 <!-- Start of main section -->
 <main role='Main'>
 
-  <div>
-
+  <div class='center'>
+    <h3>Simple Queries</h3>
   </div>
 
-  <section>
+  <section class='simple_query_section'>
 
     <div>
-      <h1>Search for Max Rating for Genre and Year</h1>
-      <h4>Please enter a year 1930-2000</h4>
+      <h4>Max Rating by Genre and Year</h4>
+      <h6>Please enter a year 2000-2016</h6>
       <p>Enter Year:<input type="text" id='year' size="10" name='year'></p>
       <select id='genre' name='genre'>
         <option value='Sports'>Sports</option>
@@ -42,6 +42,28 @@
       </select>
       <p>Result: <span id="max_rating_results">?</span></p>
       <p><a onclick="validateYear()" href=# id="max_rating">Return Max Rating</a></p>
+    </div>
+
+    <div>
+      <h4>Max Earnings by Genre</h4>
+      <h6>Please Select a Genre</h6>
+      <select id='genre_max_earnings' name='genre'>
+        <option value='Sports'>Sports</option>
+        <option value='Racing'>Racing</option>
+        <option value='Platform'>Platform</option>
+        <option value='Action'>Action</option>
+        <option value='Puzzle'>Puzzle</option>
+        <option value='Shooter'>Shooter</option>
+        <option value='Fighting'>Fighting</option>
+        <option value='Shooter'>Platform</option>
+        <option value='Simulation'>Simulation</option>
+        <option value='Role-Playing'>Role-Playing</option>
+        <option value='Adventure'>Adventure</option>
+        <option value='Strategy'>Strategy</option>
+        <option value='Misc'>Misc</option>
+      </select>
+      <p>Result: <span id="max_earnings_results">?</span></p>
+      <p><a onclick="validateYear()" href=# id="max_earnings">Return Max Rating</a></p>
     </div>
 
   </section>

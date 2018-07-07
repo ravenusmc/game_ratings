@@ -1,8 +1,11 @@
-{% extends "base.html" %}
-
-{% block content %}
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
-
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game Ratings</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+  
 <!-- Main div that will contain the rest of the page -->
 <div class='container'>
 
@@ -32,4 +35,5 @@
 <!-- End of the main div -->
 
 <!-- <script src='{{ url_for('static', filename='js/index.js') }}'></script> -->
-{% endblock %}
+</body>
+</html>

@@ -24,6 +24,17 @@ class Data():
         #getting the title from the series 
         game_title = max_rating[0]
         return game_title
+
+    def get_earnings_based_genre(self, data, genre):
+        #Getting rid of all the NA values 
+        data = data.dropna()
+        data = data[data.Genre == genre]
+        #getting the max earnings 
+        max_earnings = data.max()
+        #getting the title from the series 
+        game_title = max_earnings[0]
+        return game_title
+
         
 
 

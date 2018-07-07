@@ -1,6 +1,14 @@
 /* The code in this file all deals with the csv_index.html page */
 
 /***********************
+Generic CSS
+************************/
+
+.center {
+  text-align: center;
+}
+
+/***********************
 Code for the header section 
 ************************/
 header {
@@ -10,4 +18,27 @@ header {
   justify-content: center;
   margin-top: 100px;
   margin-bottom: 50px;
+}
+
+.simple_query_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+  border: 2px solid black;
+}
+
+
+/***********************
+Media Query Code
+************************/
+@media only all and (max-width: 768px) {
+
+  .simple_query_section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+    border: 2px solid black;
+  }
+
+
 }
