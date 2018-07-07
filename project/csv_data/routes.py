@@ -10,7 +10,9 @@ mod = Blueprint('csv_data', __name__,template_folder='templates', static_folder=
 
 @mod.route('/csv_home')
 def homepage():
-  return render_template('csv_data/csv_index.html')
+    # csv_data_file = os.path.join(mod.root_path, 'data/Video_Games_Sales.csv')
+    # game_data = pd.read_csv(csv_data_file)
+    return render_template('csv_data/csv_index.html')
 
 
 #AJAX Functions below this line 
