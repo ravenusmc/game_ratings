@@ -5,6 +5,7 @@ from bokeh.charts import Bar, Scatter, output_file, show
 from bokeh.io import output_file, show
 from bokeh.plotting import ColumnDataSource, figure, output_file, show
 from bokeh.models import CategoricalColorMapper, HoverTool
+from csv import writer
 import csv
 import matplotlib.pyplot as plt
 import numpy as np
@@ -49,6 +50,22 @@ class Graph():
 
         show(plot)
 
+    def generate_graph_game_count_by_year(self):
+        game_count_by_year = {}
+        year = 1980 
+        with open("game.csv", "w") as csv_file:
+            csv_writer = writer(csv_file)
+            csv_writer.writerow(["year", "count"])
+            while year < 2017:
+                year_data_set = self.data[self.data.Year_of_Release == year]
+                count = year_data_set['Name'].count()
+                game_count_by_year[year] = count
+                csv_writer.writerow([year, count])
+                year += 1
+        #print(game_count_by_year)
+
+
 
 graph = Graph()
-graph.generate_graph_rating_world_sales()
+# graph.generate_graph_rating_world_sales()
+graph.generate_graph_game_count_by_year()

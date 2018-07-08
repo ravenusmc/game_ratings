@@ -36,8 +36,18 @@ class Data():
         return game_title
 
     def correlation_globalSales_criticScore(self, data):
+        #Getting rid of all the NA values 
+        data = data.dropna()
         score_sales_correlation = data['Critic_Score'].corr(data['Global_Sales'])
+        score_sales_correlation = format(score_sales_correlation, '.2f')
         return score_sales_correlation
+
+    def average_game_rating(self, data):
+        data = data.dropna()
+        data = data['Critic_Score']
+        mean = data.mean()
+        mean = format(mean, '.2f')
+        return mean
 
         
 
