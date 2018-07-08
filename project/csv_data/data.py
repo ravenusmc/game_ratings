@@ -35,6 +35,10 @@ class Data():
         game_title = max_earnings[0]
         return game_title
 
+    def correlation_globalSales_criticScore(self, data):
+        score_sales_correlation = data['Critic_Score'].corr(data['Global_Sales'])
+        return score_sales_correlation
+
         
 
 

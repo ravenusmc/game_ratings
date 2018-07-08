@@ -24,16 +24,16 @@ class Graph():
         #Creating an output file 
         output_file("bokeh_graph.html")
 
-        #loading the csv to the file 
-        file = 'data/Video_Games_Sales.csv'
-        #Reading and then storing the csv file as a variable. 
-        data = pd.read_csv(file)
-        #Turning the data into a ColumnDataSource 
-        video_game_data = ColumnDataSource(data)
+        self.data = self.data[self.data.Year_of_Release == 2006]
 
-        #This line will be what sets up a color code between which states voted for clinton or trump.
-        # color_mapper = CategoricalColorMapper(factors=['Global_Sales', 'Critic_Score'], 
-        # palette=['red', 'blue']) 
+        #loading the csv to the file 
+        #file = 'data/Video_Games_Sales.csv'
+
+        #Reading and then storing the csv file as a variable. 
+        #data = pd.read_csv('data/Video_Games_Sales.csv')
+        #Turning the data into a ColumnDataSource 
+        
+        video_game_data = ColumnDataSource(self.data)
 
         plot = figure(x_axis_label='Critic Score', y_axis_label='Global Sales',
             plot_width=600, plot_height=500, tools='pan,wheel_zoom,box_zoom,reset,hover,save', 
@@ -41,9 +41,6 @@ class Graph():
 
         plot.circle(x='Critic_Score', y='Global_Sales', source=video_game_data, 
             size=15)
-
-        # plot.circle(x='Critic_Score', y='Global_Sales', source=video_game_data, 
-        #     size=15, color=dict(field='won_state', transform=color_mapper))
 
         hover = plot.select_one(HoverTool)
         hover.tooltips = [('Ratings', '@Critic_Score'),

@@ -50,3 +50,5 @@ $(function() {
     //This is what will submit the form when the user clicks the link.
     $('a#max_earnings').bind('click', submit_form);
 });
+
+

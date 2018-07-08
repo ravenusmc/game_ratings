@@ -20,6 +20,16 @@ header {
   margin-bottom: 50px;
 }
 
+/***********************
+Code for the basic information section
+************************/
+
+
+
+
+/***********************
+Code for the simple query section 
+************************/
 .simple_query_section {
   display: grid;
   grid-template-columns: 1fr 1fr;
