@@ -50,7 +50,8 @@ class Graph():
 
         show(plot)
 
-    def generate_graph_game_count_by_year(self):
+    #This method created the CSV file of the number of games by year. 
+    def generate_csv_graph_game_count_by_year(self):
         game_count_by_year = {}
         year = 1980 
         with open("game.csv", "w") as csv_file:
@@ -62,10 +63,29 @@ class Graph():
                 game_count_by_year[year] = count
                 csv_writer.writerow([year, count])
                 year += 1
-        #print(game_count_by_year)
+
+    def create_graph_game_count_by_year(self):
+        #Creating an output file 
+        output_file("game_count.html")
+
+        file = 'game.csv'
+
+        game_data = pd.read_csv(file)
+
+        video_game_data = ColumnDataSource(game_data)
+
+        plot = figure(x_axis_label='Year', y_axis_label='Game Count',
+        plot_width=600, plot_height=500, tools='pan,wheel_zoom,box_zoom,reset,hover,save', 
+        title='Number of Games By Year')
+
+        plot.vbar(x='year', width=0.5, bottom=0,
+        top='count', source=video_game_data, color="firebrick")
+
+
+        show(plot)
 
 
 
 graph = Graph()
 # graph.generate_graph_rating_world_sales()
-graph.generate_graph_game_count_by_year()
+graph.create_graph_game_count_by_year()
