@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script type="text/javascript">
         var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
@@ -18,7 +19,9 @@
 
 <nav role='navigation'>
   <ul>
-    <li><a href="{{ url_for('site.home') }}">Home</a></li>
+    <li><a href="{{ url_for('site.home') }}">Home</a></li>&nbsp;&nbsp;&nbsp;
+    <li><a href="{{ url_for('site.home') }}">CSV Data</a></li>&nbsp;&nbsp;&nbsp;
+    <li><a href="{{ url_for('site.home') }}">Web Scraping Data</a></li>
   </ul>
 </nav>
 

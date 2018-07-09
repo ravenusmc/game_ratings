@@ -1,3 +1,6 @@
+//This file will contain the bokeh code that will build the graphs on the csv_index.html page.
+
+//This function builds the number of games by year graph
 (function() {
           var fn = function() {
             Bokeh.safely(function() {

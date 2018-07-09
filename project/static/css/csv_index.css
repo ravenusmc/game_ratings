@@ -46,6 +46,14 @@ Code for the simple query section
   justify-self: center;
 }
 
+/***********************
+Code for the graph section 
+************************/
+
+.graph_section {
+  margin-top: 100px;
+}
+
 .bk-root {
   display: flex;
   flex-direction: column;

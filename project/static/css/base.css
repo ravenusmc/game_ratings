@@ -1,0 +1,51 @@
+/************************
+The code in this fil will deal with the base.html CSS 
+*************************/
+
+
+/************************
+The Code here will deal with the nav bar
+*************************/
+
+nav {
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4286f4;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+}
+
+li a {
+  color: #f4b042;
+}
+
+li a:hover {
+  color: #86f442;
+  text-decoration: none;
+}
+
+/************************
+Media queries will go here 
+*************************/
+@media only all and (max-width: 768px) {
+
+  nav {
+    height: 150px;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+}
+
+

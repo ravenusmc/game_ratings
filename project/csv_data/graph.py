@@ -88,6 +88,9 @@ class Graph():
         
         show(plot)
 
+    
+
+
 
 
 graph = Graph()
