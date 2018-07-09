@@ -46,6 +46,13 @@ Code for the simple query section
   justify-self: center;
 }
 
+.bk-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /***********************
 Media Query Code

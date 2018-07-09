@@ -2,6 +2,8 @@
 
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/csv_index.css') }}">
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.6.min.css" type="text/css" />      
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.6.min.js"></script>
 
 <!-- start of heading section -->
 <header role='heading'>
@@ -87,6 +89,9 @@
 
   <section class='graph_section'>
 
+    <div class="bk-root">
+      <div class="bk-plotdiv" id="1921ea58-3819-4d1f-a4e8-acb315e5e111"></div>
+    </div>
 
   </section>
 
@@ -94,6 +99,7 @@
 <!-- End of main section -->
 
 <script src='{{ url_for('static', filename='js/csvData.js') }}'></script>
+<script src='{{ url_for('static', filename='js/graph.js') }}'></script>
 {% endblock %}
 
 <!-- [ 'Misc' 'Simulation' 'Role-Playing' 'Adventure' 'Strategy'] -->

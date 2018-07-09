@@ -1,36 +1,4 @@
-
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Bokeh Plot</title>
-        
-<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.6.min.css" type="text/css" />
-        
-<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.6.min.js"></script>
-<script type="text/javascript">
-    Bokeh.set_log_level("info");
-</script>
-        <style>
-          html {
-            width: 100%;
-            height: 100%;
-          }
-          body {
-            width: 90%;
-            height: 100%;
-            margin: auto;
-          }
-        </style>
-    </head>
-    <body>
-        
-        <div class="bk-root">
-            <div class="bk-plotdiv" id="1921ea58-3819-4d1f-a4e8-acb315e5e111"></div>
-        </div>
-        
-        <script type="text/javascript">
-            (function() {
+(function() {
           var fn = function() {
             Bokeh.safely(function() {
               var docs_json = {"c5f65e80-9dfb-426c-9c8b-46a02e7134e7":{"roots":{"references":[{"attributes":{"callback":null},"id":"8f376fbe-316d-43d6-8887-eee520d69374","type":"DataRange1d"},{"attributes":{"below":[{"id":"ddc09dd4-dfc6-4488-8e6c-0b4116431e20","type":"LinearAxis"}],"left":[{"id":"e55a14e1-3e10-4b8b-bc7b-97bf3871efc4","type":"LinearAxis"}],"plot_height":500,"renderers":[{"id":"ddc09dd4-dfc6-4488-8e6c-0b4116431e20","type":"LinearAxis"},{"id":"dd09976d-95f9-4ada-bd32-ee516352aa62","type":"Grid"},{"id":"e55a14e1-3e10-4b8b-bc7b-97bf3871efc4","type":"LinearAxis"},{"id":"5d17b0aa-e6ec-4b91-ba1d-baa64a3ef920","type":"Grid"},{"id":"330fd884-97b2-4639-870f-9e6930f1c366","type":"BoxAnnotation"},{"id":"2cbb949b-ae2d-4b25-938b-0e914cf4832c","type":"GlyphRenderer"}],"title":{"id":"abc667a6-b1af-4079-8386-8ba9d61d15d4","type":"Title"},"tool_events":{"id":"4f8a3433-18d6-419a-8498-e7ca4af74690","type":"ToolEvents"},"toolbar":{"id":"e7ad0feb-296e-4799-a359-5bead68a6b7a","type":"Toolbar"},"x_range":{"id":"e6ef7027-39d8-452b-afad-3806bdba22a5","type":"DataRange1d"},"x_scale":{"id":"0b096adf-1e32-4f2e-8c85-6bae5e8b930d","type":"LinearScale"},"y_range":{"id":"8f376fbe-316d-43d6-8887-eee520d69374","type":"DataRange1d"},"y_scale":{"id":"d5e2f61c-22d4-4aa4-8d63-0ed14dd14981","type":"LinearScale"}},"id":"64fcae4d-9b7a-4040-a223-711c3d6357ef","subtype":"Figure","type":"Plot"},{"attributes":{"overlay":{"id":"330fd884-97b2-4639-870f-9e6930f1c366","type":"BoxAnnotation"},"plot":{"id":"64fcae4d-9b7a-4040-a223-711c3d6357ef","subtype":"Figure","type":"Plot"}},"id":"c2a6a86e-5e50-4035-af29-fc4cfcbfc870","type":"BoxZoomTool"},{"attributes":{"plot":{"id":"64fcae4d-9b7a-4040-a223-711c3d6357ef","subtype":"Figure","type":"Plot"}},"id":"dc5d4ad9-c375-4567-a967-78c5cefb6c39","type":"SaveTool"},{"attributes":{},"id":"d1ed609f-813a-40da-bc91-a6dc10ec7d5b","type":"BasicTicker"},{"attributes":{"data_source":{"id":"fe7adf6a-e55b-4ed8-b68b-341525d6dceb","type":"ColumnDataSource"},"glyph":{"id":"9d001e4f-bbe0-41d7-94a7-57282738c3ca","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"3bc984e3-f42b-4110-82ad-272de15aabbe","type":"VBar"},"selection_glyph":null},"id":"2cbb949b-ae2d-4b25-938b-0e914cf4832c","type":"GlyphRenderer"},{"attributes":{"plot":{"id":"64fcae4d-9b7a-4040-a223-711c3d6357ef","subtype":"Figure","type":"Plot"},"ticker":{"id":"38b9dea7-f8ce-4ff7-a0f2-4f4312f28442","type":"BasicTicker"}},"id":"dd09976d-95f9-4ada-bd32-ee516352aa62","type":"Grid"},{"attributes":{"plot":{"id":"64fcae4d-9b7a-4040-a223-711c3d6357ef","subtype":"Figure","type":"Plot"}},"id":"22fedb4e-700c-405c-b7a8-61525e6ff62d","type":"ResetTool"},{"attributes":{"callback":null,"plot":{"id":"64fcae4d-9b7a-4040-a223-711c3d6357ef","subtype":"Figure","type":"Plot"},"tooltips":[["Year","@year"],["Number of Games","@count"]]},"id":"10b97831-3f68-4003-829b-8fadd13bd1de","type":"HoverTool"},{"attributes":{"callback":null,"column_names":["index","count","year"],"data":{"count":[9,46,36,17,14,14,21,16,15,17,16,41,43,60,121,219,263,289,379,338,350,482,829,775,762,939,1006,1197,1427,1426,1255,1136,653,544,581,606,502],"index":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36],"year":[1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016]}},"id":"fe7adf6a-e55b-4ed8-b68b-341525d6dceb","type":"ColumnDataSource"},{"attributes":{},"id":"186c879a-7881-4a43-8258-00bb8bca4914","type":"BasicTickFormatter"},{"attributes":{"fill_color":{"value":"firebrick"},"line_color":{"value":"firebrick"},"top":{"field":"count"},"width":{"value":0.5},"x":{"field":"year"}},"id":"9d001e4f-bbe0-41d7-94a7-57282738c3ca","type":"VBar"},{"attributes":{"plot":null,"text":"Number of Games By Year"},"id":"abc667a6-b1af-4079-8386-8ba9d61d15d4","type":"Title"},{"attributes":{},"id":"d5e2f61c-22d4-4aa4-8d63-0ed14dd14981","type":"LinearScale"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"plot":null,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"330fd884-97b2-4639-870f-9e6930f1c366","type":"BoxAnnotation"},{"attributes":{},"id":"4f8a3433-18d6-419a-8498-e7ca4af74690","type":"ToolEvents"},{"attributes":{"axis_label":"Year","formatter":{"id":"186c879a-7881-4a43-8258-00bb8bca4914","type":"BasicTickFormatter"},"plot":{"id":"64fcae4d-9b7a-4040-a223-711c3d6357ef","subtype":"Figure","type":"Plot"},"ticker":{"id":"38b9dea7-f8ce-4ff7-a0f2-4f4312f28442","type":"BasicTicker"}},"id":"ddc09dd4-dfc6-4488-8e6c-0b4116431e20","type":"LinearAxis"},{"attributes":{"dimension":1,"plot":{"id":"64fcae4d-9b7a-4040-a223-711c3d6357ef","subtype":"Figure","type":"Plot"},"ticker":{"id":"d1ed609f-813a-40da-bc91-a6dc10ec7d5b","type":"BasicTicker"}},"id":"5d17b0aa-e6ec-4b91-ba1d-baa64a3ef920","type":"Grid"},{"attributes":{},"id":"0b096adf-1e32-4f2e-8c85-6bae5e8b930d","type":"LinearScale"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"ac6f3707-5882-4321-9e86-0941ea4744ec","type":"PanTool"},{"id":"d527514b-d9fb-4a66-8ddc-13a60344d2e9","type":"WheelZoomTool"},{"id":"c2a6a86e-5e50-4035-af29-fc4cfcbfc870","type":"BoxZoomTool"},{"id":"22fedb4e-700c-405c-b7a8-61525e6ff62d","type":"ResetTool"},{"id":"10b97831-3f68-4003-829b-8fadd13bd1de","type":"HoverTool"},{"id":"dc5d4ad9-c375-4567-a967-78c5cefb6c39","type":"SaveTool"}]},"id":"e7ad0feb-296e-4799-a359-5bead68a6b7a","type":"Toolbar"},{"attributes":{"plot":{"id":"64fcae4d-9b7a-4040-a223-711c3d6357ef","subtype":"Figure","type":"Plot"}},"id":"ac6f3707-5882-4321-9e86-0941ea4744ec","type":"PanTool"},{"attributes":{"plot":{"id":"64fcae4d-9b7a-4040-a223-711c3d6357ef","subtype":"Figure","type":"Plot"}},"id":"d527514b-d9fb-4a66-8ddc-13a60344d2e9","type":"WheelZoomTool"},{"attributes":{},"id":"7b2a540a-9354-4d7b-949d-c4ae974054a0","type":"BasicTickFormatter"},{"attributes":{},"id":"38b9dea7-f8ce-4ff7-a0f2-4f4312f28442","type":"BasicTicker"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"field":"count"},"width":{"value":0.5},"x":{"field":"year"}},"id":"3bc984e3-f42b-4110-82ad-272de15aabbe","type":"VBar"},{"attributes":{"callback":null},"id":"e6ef7027-39d8-452b-afad-3806bdba22a5","type":"DataRange1d"},{"attributes":{"axis_label":"Game Count","formatter":{"id":"7b2a540a-9354-4d7b-949d-c4ae974054a0","type":"BasicTickFormatter"},"plot":{"id":"64fcae4d-9b7a-4040-a223-711c3d6357ef","subtype":"Figure","type":"Plot"},"ticker":{"id":"d1ed609f-813a-40da-bc91-a6dc10ec7d5b","type":"BasicTicker"}},"id":"e55a14e1-3e10-4b8b-bc7b-97bf3871efc4","type":"LinearAxis"}],"root_ids":["64fcae4d-9b7a-4040-a223-711c3d6357ef"]},"title":"Bokeh Application","version":"0.12.6"}};
@@ -41,8 +9,4 @@
           };
           if (document.readyState != "loading") fn();
           else document.addEventListener("DOMContentLoaded", fn);
-        })();
-        
-        </script>
-    </body>
-</html>
+})();

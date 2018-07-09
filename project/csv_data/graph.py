@@ -64,6 +64,7 @@ class Graph():
                 csv_writer.writerow([year, count])
                 year += 1
 
+    #This method will create the graph from the game.csv file. 
     def create_graph_game_count_by_year(self):
         #Creating an output file 
         output_file("game_count.html")
@@ -81,7 +82,10 @@ class Graph():
         plot.vbar(x='year', width=0.5, bottom=0,
         top='count', source=video_game_data, color="firebrick")
 
-
+        hover = plot.select_one(HoverTool)
+        hover.tooltips = [('Year', '@year'),
+        ('Number of Games', '@count')]
+        
         show(plot)
 
 
