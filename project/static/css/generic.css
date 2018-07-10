@@ -1,0 +1,15 @@
+/************************
+The code in this file will deal with the all the html pages  
+*************************/
+
+.font {
+  font-family: 'Gaegu', cursive;
+}
+
+.font_big {
+  font-size: 75px;
+}
+
+.font_medium {
+  font-size: 50px;
+}

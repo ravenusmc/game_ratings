@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/generic.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/csv_index.css') }}">
 <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.6.min.css" type="text/css" />      
 <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.6.min.js"></script>
@@ -18,20 +19,20 @@
 <main role='Main'>
 
   <div class='center'>
-    <h3>Basic Information</h3>
+    <h3 class='font font_big'>Basic Information</h3>
   </div>
 
   <section class='basic_information'>
 
     <div>
-      <p>Correlation Between global sales and critic score: {{ score_sales_correlation }} (Very Weak)</p>
-      <p>Average game rating: {{ mean_game_rating }} (All years and genre)</p>
+      <p class='font'>Correlation Between global sales and critic score: {{ score_sales_correlation }} (Very Weak)</p>
+      <p class='font'>Average game rating: {{ mean_game_rating }} (All years and genre)</p>
     </div>
 
   </section>
 
   <div class='center'>
-    <h3>Simple Queries</h3>
+    <h3 class='font font_big'>Simple Queries</h3>
   </div>
 
   <section class='simple_query_section'>
@@ -84,7 +85,7 @@
   </section>
 
   <div class='center'>
-    <h3>Graph Area</h3>
+    <h3 class='font font_big'>Graph Area</h3>
   </div>
 
   <section class='graph_section'>

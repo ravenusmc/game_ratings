@@ -1,5 +1,5 @@
 /************************
-The code in this fil will deal with the base.html CSS 
+The code in this file will deal with the base.html CSS 
 *************************/
 
 
@@ -22,6 +22,8 @@ ul {
   flex-direction: row;
   justify-content: center;
   list-style-type: none;
+  font-family: 'Chela One', cursive;
+  font-size: 30px;
 }
 
 li a {

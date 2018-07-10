@@ -33,19 +33,21 @@ main {
 }
 
 .div_styling {
-  background-color: rgba(0,0,0,0.7);
+  border: 2px solid #4286f4;
+  background-color: rgba(244, 176, 66, 0.7);
   color: white;
   padding: 15px;
   border-radius: 12px;
 }
 
 h1 > a {
+  color: #4286f4;
   text-decoration: none;
 }
 
 h1 > a:hover {
   text-decoration: none;
-  color: red;
+  color: #86f442;
 }
 
 @media only all and (max-width: 768px) {

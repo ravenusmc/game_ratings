@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Game Ratings</title>
+  <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/generic.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
 </head>
 <body>
@@ -12,7 +14,7 @@
   <div class='picture_one'>
 
     <div class='div_styling'>
-      <h1><a href="{{ url_for('csv_data.homepage') }}">CSV Data</a></h1>
+      <h1><a class='font font_medium' href="{{ url_for('csv_data.homepage') }}">CSV Data</a></h1>
     </div>
 
   </div>
@@ -20,7 +22,7 @@
   <div class='picture_two'>
 
     <div class='div_styling'>
-      <h1><a href="{{ url_for('scraping.scraping_homepage') }}">Web Scraping Data</a></h1>
+      <h1><a class='font font_medium' href="{{ url_for('scraping.scraping_homepage') }}">Web Scraping Data</a></h1>
     </div>
 
   </div>

@@ -17,9 +17,8 @@ header {
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
-  background-image: url('../img/gamer_girl.jpeg');
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url('../img/arcade.jpeg');
+  background-size: cover;
   height: 500px;
 }
 
@@ -28,6 +27,8 @@ header > div {
   border-radius: 10px;
   padding: 15px;
   color: white;
+  background-color: rgba(244, 176, 66, 0.7);
+  font-family: 'Gaegu', cursive;
 }
 
 /***********************
@@ -49,7 +50,6 @@ Code for the simple query section
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2em;
-  border: 2px solid black;
 }
 
 .box1 {
@@ -80,6 +80,10 @@ Code for the graph section
 Media Query Code
 ************************/
 @media only all and (max-width: 768px) {
+
+  header > div {
+    text-align: center;
+  }
 
   .simple_query_section {
     display: grid;
