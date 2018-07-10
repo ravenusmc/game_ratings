@@ -42,7 +42,11 @@ Code for the simple query section
   border: 2px solid black;
 }
 
-.box1, .box2 {
+.box1 {
+  justify-self: center;
+}
+
+.box2 {
   justify-self: center;
 }
 
@@ -72,6 +76,10 @@ Media Query Code
     grid-template-columns: 1fr;
     grid-gap: 2em;
     border: 2px solid black;
+  }
+
+  .graph_section {
+    display: none;
   }
 
 
