@@ -58,6 +58,8 @@ ul {
 
 .home_page_title {
   color: white;
+  font-size: 40px;
+  text-transform: uppercase;
 }
 
 .left_image {
