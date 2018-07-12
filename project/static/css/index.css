@@ -31,11 +31,12 @@ ul {
   font-size: 50px;
   text-transform: uppercase;
   color: orange;
+  text-decoration: none;
 }
 
 .enter_link:hover {
   text-decoration: none;
-  color: red;
+  color: #4286f4;
 }
 
 .main_image {
@@ -51,10 +52,10 @@ ul {
 }
 
 .main_image > div {
-  border: 2px solid #4286f4;
+  border-top: 15px solid #4286f4;
+  border-bottom: 15px solid #4286f4;
   background-color: rgba(244, 176, 66, 0.9);
   padding: 15px;
-  border-radius: 15px;
 }
 
 .home_page_title {
