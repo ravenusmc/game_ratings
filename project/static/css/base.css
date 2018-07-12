@@ -41,7 +41,7 @@ Media queries will go here
 @media only all and (max-width: 768px) {
 
   nav {
-    height: 150px;
+    height: 250px;
   }
 
   ul {

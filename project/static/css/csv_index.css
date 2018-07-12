@@ -15,6 +15,7 @@ hr.style5 {
 /***********************
 Code for the header section 
 ************************/
+
 header {
   display: flex;
   flex-direction: column;
@@ -87,6 +88,10 @@ Media Query Code
 
   header > div {
     text-align: center;
+  }
+
+  .font_fix_responsive {
+    font-size: 40px;
   }
 
   .simple_query_section {
