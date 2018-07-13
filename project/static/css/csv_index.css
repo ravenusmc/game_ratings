@@ -47,6 +47,10 @@ Code for the basic information section
   justify-content: center;
 }
 
+.basic_information_div {
+  text-align: center;
+}
+
 
 /***********************
 Code for the simple query section 
