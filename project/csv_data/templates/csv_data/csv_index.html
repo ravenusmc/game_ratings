@@ -94,16 +94,31 @@
 
   <section class='graph_section'>
 
-    <div class="bk-root">
-      <div class="bk-plotdiv" id="1921ea58-3819-4d1f-a4e8-acb315e5e111"></div>
+    <div class='select_graph_area'>
+      <h5>To see a graph, please select one from the menu below</h5>
+      <select id="select_graph">
+        <option value="all">All Systems</option>
+        <option value="2600">Atari 2600</option>
+      </select>
+      <button onclick='selectGraph(); return false;'>Push To Change Graph</button>
     </div>
 
-    <div class="bk-root">
-      <div class="bk-plotdiv" id="5758488f-78f0-46ed-a0fd-bd7b4bb97909"></div>
+    <div id='graphOne'>
+      <div class="bk-root">
+        <div class="bk-plotdiv" id="1921ea58-3819-4d1f-a4e8-acb315e5e111"></div>
+      </div>
     </div>
 
-    <div class="bk-root">
-      <div class="bk-plotdiv" id="2205dec5-e528-4b31-8a96-85710bb1243b"></div>
+    <div id='graphTwo'>
+      <div class="bk-root">
+        <div class="bk-plotdiv" id="5758488f-78f0-46ed-a0fd-bd7b4bb97909"></div>
+      </div>
+    </div>
+
+    <div id='graphThree'>
+      <div class="bk-root">
+        <div class="bk-plotdiv" id="2205dec5-e528-4b31-8a96-85710bb1243b"></div>
+      </div>
     </div>
 
   </section>
@@ -113,6 +128,67 @@
 
 <script src='{{ url_for('static', filename='js/csvData.js') }}'></script>
 <script src='{{ url_for('static', filename='js/graph.js') }}'></script>
+
+<script type="text/javascript">
+//The code below will change the graph on the graph page when the user selects a 
+//specific graph to look at. I'm not 100% sure why, but when this code is moved into a 
+//seperate JS file, the graphs do not appear. 
+  
+  //This function will clear out the previous graphs on the page. Thus, when a user selects 
+  //a new graph to look at, this function will clear out the old one. 
+  let reset = () => {
+    document.getElementById("graphOne").style.display = "none";
+    // document.getElementById("graphOneSub").style.display = "none";
+    document.getElementById("graphTwo").style.display = "none";
+    // document.getElementById("graphTwoSub").style.display = "none";
+    // document.getElementById("graphThree").style.display = "none";
+    // document.getElementById("graphThreeSub").style.display = "none";
+    // document.getElementById("graphFour").style.display = "none";
+    // document.getElementById("graphFourSub").style.display = "none";
+    // document.getElementById("graphFive").style.display = "none";
+    // document.getElementById("graphFiveSub").style.display = "none";
+  };
+
+  //This function will fire when the user hits the button on the select menu. 
+  let selectGraph = () => {
+    debugger;
+    //I get the value for what the user selected. 
+    let selected_graph = document.getElementById('select_graph').value;
+    console.log(selected_graph)
+    //Calling the reset function from above
+    reset();
+    //This conditional statement will unhide the graph based on what the user selected 
+    //from the selected statement. I also all the marginTop style because the graphs where 
+    //moving further and further down the page. 
+    if (selected_graph == "all") {
+      document.getElementById("graphOne").style.display = "block";
+      // document.getElementById("graphOneSub").style.display = "block";
+      // document.getElementById("graphOne").style.marginTop = "15px";
+    }else if (selected_graph == '2600'){
+      document.getElementById("graphTwo").style.display = "block";
+    } 
+    // else if (selected_graph == "trumpVoters_metroArea") {
+    //   document.getElementById("graphTwo").style.display = "block";
+    //   document.getElementById("graphTwoSub").style.display = "block";
+    //   document.getElementById("graphTwo").style.marginTop = "-15px";
+    // } else if (selected_graph == "whitePoverty_hateCrimes") {
+    //   document.getElementById("graphThree").style.display = "block";
+    //   document.getElementById("graphThreeSub").style.display = "block";
+    //   document.getElementById("graphThree").style.marginTop = "-45px";
+    // } else if (selected_graph == "blackPoverty_hateCrimes") {
+    //   document.getElementById("graphFour").style.display = "block";
+    //   document.getElementById("graphFourSub").style.display = "block";
+    //   document.getElementById("graphFour").style.marginTop = "-75px";
+    // } else if (selected_graph == "giniIndex_hateCrimes") {
+    //   document.getElementById("graphFive").style.display = "block";
+    //   document.getElementById("graphFiveSub").style.display = "block";
+    //   document.getElementById("graphFive").style.marginTop = "-105px";
+    // }
+
+  }
+
+</script>
+
 {% endblock %}
 
 <!-- [ 'Misc' 'Simulation' 'Role-Playing' 'Adventure' 'Strategy'] -->
