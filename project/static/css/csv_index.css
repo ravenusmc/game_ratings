@@ -87,7 +87,8 @@ Code for the graph section
 }
 
 #graphOne, #graphTwo, #graphThree, #graphFour, #graphFive, #graphSix, #graphSeven,
-#graphEight, #graphNine, #graphTen, #graphEleven, #graphTwelve {
+#graphEight, #graphNine, #graphTen, #graphEleven, #graphTwelve, #graphThirteen,
+#graphFourteen, #graphFifteen, #graphSixteen, #graphSeventeen {
   display: none;
 }
 

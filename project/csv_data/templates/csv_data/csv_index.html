@@ -109,6 +109,11 @@
         <option value="PS3">PS3</option>
         <option value="PS2">PS2</option>
         <option value="PS">PS</option>
+        <option value="NES">NES</option>
+        <option value="N64">N64</option>
+        <option value="GB">Game Boy</option>
+        <option value="DS">DS</option>
+        <option value="3DS">3DS</option>
       </select>
       <button class='font' onclick='selectGraph(); return false;'>Push To Change Graph</button>
     </div>
@@ -185,6 +190,36 @@
       </div>
     </div>
 
+    <div id='graphThirteen'>
+      <div class="bk-root">
+          <div class="bk-plotdiv" id="a079a37a-428d-441d-a5bf-76faae31c6c5"></div>
+      </div>
+    </div>
+
+    <div id='graphFourteen'>
+      <div class="bk-root">
+          <div class="bk-plotdiv" id="ca621055-c08c-4d34-aaea-de19727dc536"></div>
+      </div>
+    </div>
+
+    <div id='graphFifteen'>
+      <div class="bk-root">
+        <div class="bk-plotdiv" id="bda456c3-37f7-492a-9405-b7100df9701a"></div>
+      </div>
+    </div>
+
+    <div id='graphSixteen'>
+      <div class="bk-root">
+          <div class="bk-plotdiv" id="6bff7b30-7614-47ba-a90a-ac9000d5b0d4"></div>
+      </div>
+    </div>
+
+    <div id='graphSeventeen'>
+      <div class="bk-root">
+          <div class="bk-plotdiv" id="c3561ccd-5454-4929-9be2-2f6e96a5a87f"></div>
+      </div>
+    </div>
+
   </section>
 
 </main>
@@ -213,6 +248,11 @@
     document.getElementById('graphTen').style.display = "none";
     document.getElementById('graphEleven').style.display = "none";
     document.getElementById('graphTwelve').style.display = "none";
+    document.getElementById('graphThirteen').style.display = "none";
+    document.getElementById('graphFourteen').style.display = "none";
+    document.getElementById('graphFifteen').style.display = "none";
+    document.getElementById('graphSixteen').style.display = "none";
+    document.getElementById('graphSeventeen').style.display = "none";
   };
 
   //This function will fire when the user hits the button on the select menu. 
@@ -249,6 +289,16 @@
       document.getElementById('graphEleven').style.display = "block";
     }else if (selected_graph == 'PS'){
       document.getElementById('graphTwelve').style.display = "block";
+    }else if (selected_graph == 'NES'){
+      document.getElementById('graphThirteen').style.display = "block";
+    }else if (selected_graph == 'N64'){
+      document.getElementById('graphFourteen').style.display = "block";
+    }else if (selected_graph == 'GB'){
+      document.getElementById('graphFifteen').style.display = "block";
+    }else if (selected_graph == 'DS'){
+      document.getElementById('graphSixteen').style.display = "block";
+    }else if (selected_graph == '3DS'){
+      document.getElementById('graphSeventeen').style.display = "block";
     }
 
   }
