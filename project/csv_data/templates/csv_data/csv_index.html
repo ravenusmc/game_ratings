@@ -102,6 +102,13 @@
         <option value="Xone">Xbox One</option>
         <option value="Xbox">X-Box</option>
         <option value="360">X-Box 360</option>
+        <option value="WiiU">Wii U</option>
+        <option value="Wii">Wii</option>
+        <option value="SNES">SNES</option>
+        <option value="PS4">PS4</option>
+        <option value="PS3">PS3</option>
+        <option value="PS2">PS2</option>
+        <option value="PS">PS</option>
       </select>
       <button class='font' onclick='selectGraph(); return false;'>Push To Change Graph</button>
     </div>
@@ -136,6 +143,48 @@
       </div>
     </div>
 
+    <div id='graphSix'>
+      <div class="bk-root">
+          <div class="bk-plotdiv" id="1f024027-2d62-45b7-a4eb-f2227790bb22"></div>
+      </div>
+    </div>
+
+    <div id='graphSeven'>
+      <div class="bk-root">
+          <div class="bk-plotdiv" id="065c3fa6-68dd-43b5-a543-b05eefa4df77"></div>
+      </div>
+    </div>
+
+    <div id='graphEight'>
+      <div class="bk-root">
+          <div class="bk-plotdiv" id="305dff9c-80d0-4165-ae19-be4f0545c0b2"></div>
+      </div>
+    </div>
+
+    <div id='graphNine'>
+      <div class="bk-root">
+          <div class="bk-plotdiv" id="60990773-b60b-42fc-9b4c-976277eee7c1"></div>
+      </div>
+    </div>
+
+    <div id='graphTen'>
+      <div class="bk-root">
+        <div class="bk-plotdiv" id="eb400e1a-bd03-4302-b7a7-05eb8cc83aac"></div>
+      </div>
+    </div>
+
+    <div id='graphEleven'>
+      <div class="bk-root">
+          <div class="bk-plotdiv" id="39e772f1-60f9-47e7-a5e7-b0d4974b1229"></div>
+      </div>
+    </div>
+
+    <div id='graphTwelve'>
+      <div class="bk-root">
+          <div class="bk-plotdiv" id="540d0768-dd32-4827-bf4a-394a1f2ce817"></div>
+      </div>
+    </div>
+
   </section>
 
 </main>
@@ -157,16 +206,21 @@
     document.getElementById("graphThree").style.display = "none";
     document.getElementById("graphFour").style.display = "none";
     document.getElementById("graphFive").style.display = "none";
-    
+    document.getElementById("graphSix").style.display = "none";
+    document.getElementById("graphSeven").style.display = "none";
+    document.getElementById('graphEight').style.display = "none";
+    document.getElementById('graphNine').style.display = "none";
+    document.getElementById('graphTen').style.display = "none";
+    document.getElementById('graphEleven').style.display = "none";
+    document.getElementById('graphTwelve').style.display = "none";
   };
 
   //This function will fire when the user hits the button on the select menu. 
   let selectGraph = () => {
-    debugger;
     //I get the value for what the user selected. 
     let selected_graph = document.getElementById('select_graph').value;
-    console.log(selected_graph)
-    //Calling the reset function from above
+    //Calling the reset function from above which will remove any graph on the screen so that 
+    //only one graph is seen at a time. 
     reset();
     //This conditional statement will unhide the graph based on what the user selected 
     //from the selected statement. I also all the marginTop style because the graphs where 
@@ -181,6 +235,20 @@
       document.getElementById('graphFour').style.display = "block";
     }else if (selected_graph == '360'){
        document.getElementById('graphFive').style.display = "block";
+    }else if (selected_graph == 'WiiU') {
+      document.getElementById('graphSix').style.display = "block";
+    }else if (selected_graph == 'Wii'){
+      document.getElementById('graphSeven').style.display = "block";
+    }else if (selected_graph == 'SNES'){
+      document.getElementById('graphEight').style.display = "block";
+    }else if (selected_graph == 'PS4'){
+      document.getElementById('graphNine').style.display = "block";
+    }else if (selected_graph == 'PS3'){
+      document.getElementById('graphTen').style.display = "block";
+    }else if (selected_graph == 'PS2'){
+      document.getElementById('graphEleven').style.display = "block";
+    }else if (selected_graph == 'PS'){
+      document.getElementById('graphTwelve').style.display = "block";
     }
 
   }
