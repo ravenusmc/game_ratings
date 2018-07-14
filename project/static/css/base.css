@@ -38,6 +38,17 @@ li a:hover {
 }
 
 /************************
+The Code here will deal with the footer 
+*************************/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/************************
 Media queries will go here 
 *************************/
 @media only all and (max-width: 768px) {
