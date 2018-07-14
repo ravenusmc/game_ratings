@@ -95,12 +95,15 @@
   <section class='graph_section'>
 
     <div class='select_graph_area'>
-      <h5>To see a graph, please select one from the menu below</h5>
+      <h5 class='font'>To see a graph, please select one from the menu below</h5>
       <select id="select_graph">
         <option value="all">All Systems</option>
         <option value="2600">Atari 2600</option>
+        <option value="Xone">Xbox One</option>
+        <option value="Xbox">X-Box</option>
+        <option value="360">X-Box 360</option>
       </select>
-      <button onclick='selectGraph(); return false;'>Push To Change Graph</button>
+      <button class='font' onclick='selectGraph(); return false;'>Push To Change Graph</button>
     </div>
 
     <div id='graphOne'>
@@ -121,6 +124,18 @@
       </div>
     </div>
 
+    <div id='graphFour'>
+      <div class="bk-root">
+        <div class="bk-plotdiv" id="deea388e-07bc-424b-825f-fdba2eaa35e4"></div>
+      </div>
+    </div>
+
+    <div id='graphFive'>
+      <div class="bk-root">
+          <div class="bk-plotdiv" id="d71094fe-2369-46b9-b5ae-b0457c9bd477"></div>
+      </div>
+    </div>
+
   </section>
 
 </main>
@@ -138,15 +153,11 @@
   //a new graph to look at, this function will clear out the old one. 
   let reset = () => {
     document.getElementById("graphOne").style.display = "none";
-    // document.getElementById("graphOneSub").style.display = "none";
     document.getElementById("graphTwo").style.display = "none";
-    // document.getElementById("graphTwoSub").style.display = "none";
-    // document.getElementById("graphThree").style.display = "none";
-    // document.getElementById("graphThreeSub").style.display = "none";
-    // document.getElementById("graphFour").style.display = "none";
-    // document.getElementById("graphFourSub").style.display = "none";
-    // document.getElementById("graphFive").style.display = "none";
-    // document.getElementById("graphFiveSub").style.display = "none";
+    document.getElementById("graphThree").style.display = "none";
+    document.getElementById("graphFour").style.display = "none";
+    document.getElementById("graphFive").style.display = "none";
+    
   };
 
   //This function will fire when the user hits the button on the select menu. 
@@ -162,28 +173,15 @@
     //moving further and further down the page. 
     if (selected_graph == "all") {
       document.getElementById("graphOne").style.display = "block";
-      // document.getElementById("graphOneSub").style.display = "block";
-      // document.getElementById("graphOne").style.marginTop = "15px";
     }else if (selected_graph == '2600'){
       document.getElementById("graphTwo").style.display = "block";
-    } 
-    // else if (selected_graph == "trumpVoters_metroArea") {
-    //   document.getElementById("graphTwo").style.display = "block";
-    //   document.getElementById("graphTwoSub").style.display = "block";
-    //   document.getElementById("graphTwo").style.marginTop = "-15px";
-    // } else if (selected_graph == "whitePoverty_hateCrimes") {
-    //   document.getElementById("graphThree").style.display = "block";
-    //   document.getElementById("graphThreeSub").style.display = "block";
-    //   document.getElementById("graphThree").style.marginTop = "-45px";
-    // } else if (selected_graph == "blackPoverty_hateCrimes") {
-    //   document.getElementById("graphFour").style.display = "block";
-    //   document.getElementById("graphFourSub").style.display = "block";
-    //   document.getElementById("graphFour").style.marginTop = "-75px";
-    // } else if (selected_graph == "giniIndex_hateCrimes") {
-    //   document.getElementById("graphFive").style.display = "block";
-    //   document.getElementById("graphFiveSub").style.display = "block";
-    //   document.getElementById("graphFive").style.marginTop = "-105px";
-    // }
+    }else if (selected_graph == 'Xone'){
+      document.getElementById("graphThree").style.display = "block";
+    }else if (selected_graph == 'Xbox'){
+      document.getElementById('graphFour').style.display = "block";
+    }else if (selected_graph == '360'){
+       document.getElementById('graphFive').style.display = "block";
+    }
 
   }
 

@@ -86,7 +86,7 @@ Code for the graph section
   margin-bottom: 50px;
 }
 
-#graphOne, #graphTwo, #graphThree {
+#graphOne, #graphTwo, #graphThree, #graphFour, #graphFive {
   display: none;
 }
 
