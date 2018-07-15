@@ -34,7 +34,7 @@
 
   <hr class="style5">
 
-  <div class='center'>
+  <div class='center background_color'>
     <h3 class='font font_big font_fix_responsive'>Simple Queries</h3>
   </div>
 
@@ -91,8 +91,10 @@
 
   <div class='center'>
     <h3 class='font font_big'>Graph Area</h3>
+    <h4 class='graph_message'>Graphs are not displayed on small screens</h4>
   </div>
 
+  <!-- This section will contain all of the HTML code for the graphs -->
   <section class='graph_section'>
 
     <div class='select_graph_area'>
@@ -229,6 +231,7 @@
     </div>
 
   </section>
+  <!-- End of Graph Section -->
 
   <hr class="style5">
 
@@ -237,7 +240,6 @@
 
 <script src='{{ url_for('static', filename='js/csvData.js') }}'></script>
 <script src='{{ url_for('static', filename='js/graph.js') }}'></script>
-
 <script type="text/javascript">
 //The code below will change the graph on the graph page when the user selects a 
 //specific graph to look at. I'm not 100% sure why, but when this code is moved into a 

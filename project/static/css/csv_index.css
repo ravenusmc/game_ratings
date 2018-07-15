@@ -59,7 +59,6 @@ Code for the simple query section
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2em;
-/*  background-color: #4286f4;*/
 }
 
 .box1 {
@@ -76,6 +75,10 @@ Code for the graph section
 
 .graph_section {
   margin-top: 100px;
+}
+
+.graph_message {
+  display: none;
 }
 
 .select_graph_area {
@@ -123,6 +126,10 @@ Media Query Code
 
   .graph_section {
     display: none;
+  }
+
+  .graph_message {
+    display: block;
   }
 
 

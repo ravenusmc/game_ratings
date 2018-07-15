@@ -13,3 +13,12 @@ The code in this file will deal with the all the html pages
 .font_medium {
   font-size: 50px;
 }
+
+/* Code for buttons */
+button {
+  margin-top: 10px;
+  background-color: #4286f4;
+  color: #f4b042;
+  border-color: #4286f4;
+  border-radius: 10px;
+}

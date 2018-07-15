@@ -1,7 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/generic.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/scraping.css') }}">
 
-<h1>Scraping Test</h1>
+<!-- Start of main section -->
+<main role='main'>
+
+  <section>
+
+    <form>
+      <label>Please Enter Game Title:</label><input required>
+      <br>
+      <button>Submit</button>
+    </form>
+    
+  </section>
+
+</main>
+<!-- End of main section -->
 
 {% endblock %}
