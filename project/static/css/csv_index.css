@@ -59,6 +59,7 @@ Code for the simple query section
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2em;
+/*  background-color: #4286f4;*/
 }
 
 .box1 {
@@ -86,7 +87,7 @@ Code for the graph section
   margin-bottom: 50px;
 }
 
-#graphOne, #graphTwo, #graphThree, #graphFour, #graphFive, #graphSix, #graphSeven,
+#graphTwo, #graphThree, #graphFour, #graphFive, #graphSix, #graphSeven,
 #graphEight, #graphNine, #graphTen, #graphEleven, #graphTwelve, #graphThirteen,
 #graphFourteen, #graphFifteen, #graphSixteen, #graphSeventeen, #graphEightteen {
   display: none;

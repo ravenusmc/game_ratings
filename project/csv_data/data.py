@@ -8,6 +8,7 @@ from csv import writer
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import math
 
 class Data():
 
@@ -23,7 +24,11 @@ class Data():
         max_rating = data.max()
         #getting the title from the series 
         game_title = max_rating[0]
-        return game_title
+        if isinstance(game_title, str):
+            return game_title
+        elif math.isnan(game_title):
+            game_title = 'No games found for that year'
+            return game_title
 
     def get_earnings_based_genre(self, data, genre):
         #Getting rid of all the NA values 
@@ -48,6 +53,12 @@ class Data():
         mean = data.mean()
         mean = format(mean, '.2f')
         return mean
+
+    def correlation_USSales_criticScore(self, data):
+        data = data.dropna()
+        score_sales_correlation_US = data['Critic_Score'].corr(data['NA_Sales'])
+        score_sales_correlation_US = format(score_sales_correlation_US, '.2f')
+        return score_sales_correlation_US
 
         
 

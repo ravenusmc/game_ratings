@@ -8,7 +8,7 @@ function validateYear() {
     year = document.getElementById("year").value;
 
     if (isNaN(year) || year < 1980  || year >= 2017) {
-        message = "Input is not valid";
+        message = "Year input is not valid";
         alert(message);
     }
 }

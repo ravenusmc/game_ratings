@@ -63,6 +63,10 @@ Media queries will go here
     flex-direction: column;
   }
 
+  footer {
+    text-align: center;
+  }
+
 }
 
 

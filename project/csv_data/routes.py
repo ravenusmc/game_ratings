@@ -14,9 +14,10 @@ def homepage():
     csv_data_file = os.path.join(mod.root_path, 'data/Video_Games_Sales.csv')
     game_data = pd.read_csv(csv_data_file)
     score_sales_correlation = data.correlation_globalSales_criticScore(game_data)
+    score_sales_correlation_US = data.correlation_USSales_criticScore(game_data)
     mean_game_rating = data.average_game_rating(game_data)
     return render_template('csv_data/csv_index.html', score_sales_correlation = score_sales_correlation, 
-        mean_game_rating = mean_game_rating)
+        mean_game_rating = mean_game_rating, score_sales_correlation_US = score_sales_correlation_US)
 
 
 #AJAX Functions below this line 

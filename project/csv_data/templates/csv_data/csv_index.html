@@ -26,6 +26,7 @@
 
     <div class='basic_information_div'>
       <p class='font'>Correlation Between global sales and critic score: {{ score_sales_correlation }} (Very Weak)</p>
+      <p class='font'>Correlation Between U.S sales and critic score: {{ score_sales_correlation_US }} (Very Weak)</p>
       <p class='font'>Average game rating: {{ mean_game_rating }} (All years and genre)</p>
     </div>
 
@@ -81,7 +82,7 @@
         <option value='Misc'>Misc</option>
       </select>
       <p class='font'>Result: <span id="max_earnings_results">?</span></p>
-      <p class='font'><a onclick="validateYear()" href=# id="max_earnings">Return Max Rating</a></p>
+      <p class='font'><a onclick="validateYear()" href=# id="max_earnings">Return Max Earnings</a></p>
     </div>
 
   </section>
