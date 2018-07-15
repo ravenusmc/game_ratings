@@ -102,6 +102,7 @@
         <option value="NES">NES</option>
         <option value="SNES">SNES</option>
         <option value="N64">N64</option>
+        <option value="GC">Game Cube</option>
         <option value="Wii">Wii</option>
         <option value="WiiU">Wii U</option>
         <option value="GB">Game Boy</option>
@@ -220,6 +221,12 @@
       </div>
     </div>
 
+    <div id='graphEightteen'>
+      <div class="bk-root">
+        <div class="bk-plotdiv" id="13de0284-ad4c-4cc1-9ab7-753df0031ea2"></div>
+      </div>
+    </div>
+
   </section>
 
   <hr class="style5">
@@ -255,6 +262,7 @@
     document.getElementById('graphFifteen').style.display = "none";
     document.getElementById('graphSixteen').style.display = "none";
     document.getElementById('graphSeventeen').style.display = "none";
+    document.getElementById('graphEightteen').style.display = "none";
   };
 
   //This function will fire when the user hits the button on the select menu. 
@@ -301,6 +309,8 @@
       document.getElementById('graphSixteen').style.display = "block";
     }else if (selected_graph == '3DS'){
       document.getElementById('graphSeventeen').style.display = "block";
+    }else if (selected_graph == 'GC'){
+      document.getElementById('graphEightteen').style.display = "block";
     }
 
   }

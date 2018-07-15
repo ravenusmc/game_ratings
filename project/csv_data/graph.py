@@ -59,7 +59,7 @@ class Graph():
         #Creating an output file 
         output_file("game_count.html")
 
-        file = '3DS.csv'
+        file = 'GC.csv'
 
         game_data = pd.read_csv(file)
 
@@ -80,8 +80,9 @@ class Graph():
 
     #This method will create the CSV files for each game system 
     def create_csv_graph_game_count_by_system(self):
-        game_systems = ['Wii', 'NES', '2600', '3DO', '3DS', 'DS', 'GB','X360', 'PS3', 'PS2', 'SNES', 'PS4', 'N64',
-        'WiiU', 'XOne', 'PS', 'XB']
+        # game_systems = ['Wii', 'NES', '2600', '3DO', '3DS', 'DS', 'GB','X360', 'PS3', 'PS2', 'SNES', 'PS4', 'N64',
+        # 'WiiU', 'XOne', 'PS', 'XB']
+        game_systems = ['GC']
         for game_system in game_systems:
             game_count_by_year = {}
             year = 1980 
