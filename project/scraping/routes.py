@@ -14,9 +14,7 @@ def scraping_homepage():
         #Recieving the information from the user.
         gameTitle = request.form['gameTitle']
         gameSystem = request.form['system']
-        print(gameSystem)
         gameTitle = fix_String.transform_user_input_to_lowercase(gameTitle)
         gameTitle = fix_String.add_dash_in_gameTitle(gameTitle)
-        print(gameTitle)
-        #get_data_based_on_game_title(gameTitle)
+        scrape.get_data_based_on_game_title(gameTitle, gameSystem)
     return render_template('scraping/scraping.html')

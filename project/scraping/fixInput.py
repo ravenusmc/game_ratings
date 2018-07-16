@@ -7,5 +7,5 @@ class Fix_Input():
         return gameTitle_lower
 
     def add_dash_in_gameTitle(self, gameTitle):
-        gameTitle_replaced = gameTitle.replace(" ", "_")
+        gameTitle_replaced = gameTitle.replace(" ", "-")
         return gameTitle_replaced
