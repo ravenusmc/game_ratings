@@ -13,6 +13,8 @@ def scraping_homepage():
         scrape = Web_Scraping()
         #Recieving the information from the user.
         gameTitle = request.form['gameTitle']
+        gameSystem = request.form['system']
+        print(gameSystem)
         gameTitle = fix_String.transform_user_input_to_lowercase(gameTitle)
         gameTitle = fix_String.add_dash_in_gameTitle(gameTitle)
         print(gameTitle)

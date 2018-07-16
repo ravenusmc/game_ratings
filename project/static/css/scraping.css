@@ -2,3 +2,9 @@
 The CSS in this page will deal with the scraping.html page 
 *******************************/
 
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
