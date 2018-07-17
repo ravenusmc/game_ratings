@@ -17,5 +17,9 @@ def scraping_homepage():
         gameTitle = fix_String.transform_user_input_to_lowercase(gameTitle)
         gameTitle = fix_String.add_dash_in_gameTitle(gameTitle)
         review_grades = scrape.get_data_based_on_game_title(gameTitle, gameSystem)
-        print(review_grades)
+        # print(review_grades)
+        #Need to convert my list to a DF or Series 
+        #Need to calculate the mean from that
+        #Need to calculate the standard deviavtion 
+        #Need to make a bar graph of the scores. 
     return render_template('scraping/scraping.html')
