@@ -16,5 +16,6 @@ def scraping_homepage():
         gameSystem = request.form['system']
         gameTitle = fix_String.transform_user_input_to_lowercase(gameTitle)
         gameTitle = fix_String.add_dash_in_gameTitle(gameTitle)
-        scrape.get_data_based_on_game_title(gameTitle, gameSystem)
+        review_grades = scrape.get_data_based_on_game_title(gameTitle, gameSystem)
+        print(review_grades)
     return render_template('scraping/scraping.html')
