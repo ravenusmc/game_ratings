@@ -7,18 +7,25 @@
 <!-- Start of main section -->
 <main role='main'>
 
-  <section>
+  <section id='form_section'>
 
     <form method='POST'>
-      <label>Please Enter Game Title:</label><input name='gameTitle' required>
-      <label>Please Select the Game System:</label>
+      <i class="fa fa-gamepad fa-5x" aria-hidden="true"></i>
+      <label class='font-color font'>Please Enter Game Title:</label><input name='gameTitle' required>
+      <label class='font-color font'>Please Select the Game System:</label>
       <select name='system'>
         <option value='playstation-4'>PS 4</option>
         <option value='XboxOne'>Xbox One</option>
         <option value='Switch'>Switch</option>
       </select>
       <button>Submit</button>
+      <div>
+        <h6 class='font-color font'>The Mean is: </h6>
+        <h6 class='font-color font'>The Standard Deviation is: </h6>
+      </div>
     </form>
+
+
 
   </section>
 

@@ -2,9 +2,32 @@
 The CSS in this page will deal with the scraping.html page 
 *******************************/
 
+main {
+  display: flex;
+  flex-flow: column;
+  min-height: 65vh;
+}
+
+#form_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 form {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 2px solid #f4b042;
+  min-height: 60vh;
+  background-color: #4286f4;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.font-color {
+  color: #f4b042;
 }
