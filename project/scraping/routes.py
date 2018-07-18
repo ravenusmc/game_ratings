@@ -1,4 +1,5 @@
 from flask import Blueprint, Flask, session, jsonify, redirect, url_for, escape, render_template, request, flash
+import json 
 from project.scraping.scraping import *
 from project.scraping.fixInput import *
 
@@ -14,10 +15,19 @@ def scraping_homepage():
         #Recieving the information from the user.
         gameTitle = request.form['gameTitle']
         gameSystem = request.form['system']
+
         gameTitle = fix_String.transform_user_input_to_lowercase(gameTitle)
         gameTitle = fix_String.add_dash_in_gameTitle(gameTitle)
+
         review_grades = scrape.get_data_based_on_game_title(gameTitle, gameSystem)
         score_dataFrame = scrape.convert_list_to_series(review_grades)
+
         score_mean_formatted = scrape.calculate_mean(score_dataFrame)
         score_std_formatted = scrape.calculate_standard_deviation(score_dataFrame)
+
+        data = {}
+        data = { 'mean': score_mean_formatted, 'std': score_std_formatted }
+        return redirect(url_for('scraping.scraping_homepage', data = data))
     return render_template('scraping/scraping.html')
+
+#AJAX Functions below this line 

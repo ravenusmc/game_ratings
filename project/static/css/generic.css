@@ -2,6 +2,11 @@
 The code in this file will deal with the all the html pages  
 *************************/
 
+hr.style5 {
+  background-color: #fff;
+  border-top: 2px dashed #8c8b8b;
+}
+
 .font {
   font-family: 'Gaegu', cursive;
 }

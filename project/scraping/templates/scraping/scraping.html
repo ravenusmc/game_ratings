@@ -19,17 +19,41 @@
         <option value='Switch'>Switch</option>
       </select>
       <button>Submit</button>
-      <div>
-        <h6 class='font-color font'>The Mean is: </h6>
-        <h6 class='font-color font'>The Standard Deviation is: </h6>
+      <div id='stat_data'>
+        <h6 class='font-color font'>The Mean is: {% raw %}{{ mean }}{% endraw %}</h6>
+        <h6 class='font-color font'>The Standard Deviation is: {% raw %}{{ std }}{% endraw %}</h6>
       </div>
     </form>
-
-
 
   </section>
 
 </main>
+
+<hr class="style5">
 <!-- End of main section -->
 
+<!-- Vue CDN -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script type="text/javascript">
+
+  // function recieveData(mean){
+  //   return mean;
+  // }
+  // var mean = recieveData({{ mean|safe }})
+
+  // console.log(mean);
+
+  var mean = {{ data.mean|tojson }}
+
+  console.log(mean);
+  
+  const stat_data = new Vue({
+    el: '#stat_data',
+    data: {
+      mean: 4,
+      std: 5
+    }
+  });
+
+</script>
 {% endblock %}
