@@ -1,6 +1,9 @@
 /*******************************
 The CSS in this page will deal with the scraping.html page 
 *******************************/
+.font_size {
+  font-size: 25px;
+}
 
 main {
   display: flex;
@@ -26,6 +29,18 @@ form {
   background-color: #4286f4;
   border-radius: 20px;
   padding: 10px;
+}
+
+#scrape_button {
+  background-color: #86f442;
+  border: #86f442;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+#scrape_button:hover {
+  background-color: #f4b042;
+  color: #4286f4;
 }
 
 .font-color {

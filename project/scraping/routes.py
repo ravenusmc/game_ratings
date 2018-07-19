@@ -25,9 +25,9 @@ def scraping_homepage():
         score_mean_formatted = scrape.calculate_mean(score_dataFrame)
         score_std_formatted = scrape.calculate_standard_deviation(score_dataFrame)
 
-        data = {}
-        data = { 'mean': score_mean_formatted, 'std': score_std_formatted }
-        return redirect(url_for('scraping.scraping_homepage', data = data))
-    return render_template('scraping/scraping.html')
+        return render_template('scraping/scraping.html', mean = json.dumps(score_mean_formatted), std = json.dumps(score_std_formatted))
+        #return redirect(url_for('scraping.scraping_homepage', data = data))
+    data = "Hello Mike"
+    return render_template('scraping/scraping.html', data = data)
 
 #AJAX Functions below this line 
