@@ -29,7 +29,7 @@ Then follow the address, which your console/terminal tells you to go to see the
 website.
 
 # Issues / Other
-
+The web scraping is working although there seems to be a slight issue with some of the value that are returned. I almost believe that this is an issue with Metacritic but I'll be looking into it more. 
 
 
 # Preview
