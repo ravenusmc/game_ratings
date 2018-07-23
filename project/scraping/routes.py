@@ -20,14 +20,16 @@ def scraping_homepage():
         gameTitle = fix_String.add_dash_in_gameTitle(gameTitle)
 
         review_grades = scrape.get_data_based_on_game_title(gameTitle, gameSystem)
-        score_dataFrame = scrape.convert_list_to_series(review_grades)
 
-        score_mean_formatted = scrape.calculate_mean(score_dataFrame)
-        score_std_formatted = scrape.calculate_standard_deviation(score_dataFrame)
+        if review_grades == 'No Games Found!':
+            score_mean_formatted = review_grades
+            score_std_formatted = review_grades
+        else:
+            score_dataFrame = scrape.convert_list_to_series(review_grades)
+            score_mean_formatted = scrape.calculate_mean(score_dataFrame)
+            score_std_formatted = scrape.calculate_standard_deviation(score_dataFrame)
 
-        return render_template('scraping/scraping.html', mean = json.dumps(score_mean_formatted), std = json.dumps(score_std_formatted))
-        #return redirect(url_for('scraping.scraping_homepage', data = data))
-    data = "Hello Mike"
-    return render_template('scraping/scraping.html', data = data)
+        return render_template('scraping/scraping.html', mean = json.dumps(score_mean_formatted), 
+            std = json.dumps(score_std_formatted))
+    return render_template('scraping/scraping.html')
 
-#AJAX Functions below this line 
