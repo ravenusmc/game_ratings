@@ -82,7 +82,7 @@ Code for the graph section
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: -50px;
+  margin-top: -75px;
   margin-bottom: 50px;
 }
 
@@ -97,6 +97,14 @@ Code for the graph section
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.select_graph_area_two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -10px;
 }
 
 

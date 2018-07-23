@@ -90,11 +90,11 @@
   <hr class="style5">
 
   <div class='center'>
-    <h3 class='font font_big'>Graph Area</h3>
+    <h3 class='font font_big'>First Graph Area</h3>
     <h4 class='graph_message'>Graphs are not displayed on small screens</h4>
   </div>
 
-  <!-- This section will contain all of the HTML code for the graphs -->
+  <!-- This section will contain all of the HTML code for the first graph section -->
   <section class='graph_section'>
 
     <div class='select_graph_area'>
@@ -231,7 +231,34 @@
     </div>
 
   </section>
-  <!-- End of Graph Section -->
+  <!-- End of First Graph Section -->
+
+  <hr class="style5">
+
+  <div class='center'>
+    <h3 class='font font_big'>Second Graph Area</h3>
+    <h4 class='graph_message'>Graphs are not displayed on small screens</h4>
+  </div>
+
+  <!-- Start of second graph section --> 
+  <section>
+    <!-- The graphs here will show game count by genre -->
+    <div class='select_graph_area_two'>
+      <h5 class='font'>To see a graph, please select one from the menu below</h5>
+      <select id="select_graph">
+        <option value="all">Action</option>
+        <option value="all">Fighting</option>
+        <option value="all">Platform</option>
+        <option value="all">Racing</option>
+        <option value="all">Role Playing</option>
+        <option value="all">Shooter</option>
+        
+      </select>
+      <button class='font' onclick='selectGraph(); return false;'>Push To Change Graph</button>
+    </div>
+
+  </section>
+  <!-- End of second graph section -->
 
   <hr class="style5">
 
