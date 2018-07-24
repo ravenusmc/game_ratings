@@ -59,7 +59,7 @@ class Graph():
         #Creating an output file 
         output_file("game_count.html")
 
-        file = 'Racing.csv'
+        file = 'Shooter.csv'
 
         game_data = pd.read_csv(file)
 

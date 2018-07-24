@@ -281,6 +281,18 @@
       </div>
     </div>
 
+    <div id='graphFive_genre'>
+      <div class="bk-root">
+          <div class="bk-plotdiv" id="17fc50d1-83ac-496c-9527-5d54c5cf73a2"></div>
+      </div>
+    </div>
+
+    <div id='graphSix_genre'>
+      <div class="bk-root">
+          <div class="bk-plotdiv" id="84624920-dea2-4444-bc97-3b93c377b32d"></div>
+      </div>
+    </div>
+
   </section>
   <!-- End of second graph section -->
 
@@ -374,6 +386,8 @@
     document.getElementById("graphTwo_genre").style.display = "none";
     document.getElementById("graphThree_genre").style.display = "none";
     document.getElementById("graphFour_genre").style.display = "none";
+    document.getElementById("graphFive_genre").style.display = "none";
+    document.getElementById("graphSix_genre").style.display = "none";
   };
 
   let selectGenreGraph = () => {
@@ -390,6 +404,10 @@
       document.getElementById("graphThree_genre").style.display = "block";
     }else if (selected_genre == "racing"){
       document.getElementById("graphFour_genre").style.display = "block";
+    }else if (selected_genre == "role"){
+      document.getElementById("graphFive_genre").style.display = "block";
+    }else if (selected_genre == "shooter"){
+      document.getElementById("graphSix_genre").style.display = "block";
     }
 
   }
