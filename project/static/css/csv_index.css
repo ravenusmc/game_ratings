@@ -92,6 +92,10 @@ Code for the graph section
   display: none;
 }
 
+#graphTwo_genre {
+  display: none;
+}
+
 .bk-root {
   display: flex;
   flex-direction: column;

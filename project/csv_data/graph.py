@@ -59,7 +59,7 @@ class Graph():
         #Creating an output file 
         output_file("game_count.html")
 
-        file = 'GC.csv'
+        file = 'Fighting.csv'
 
         game_data = pd.read_csv(file)
 
@@ -70,7 +70,7 @@ class Graph():
         title='Number of Games By Year')
 
         plot.vbar(x='year', width=0.5, bottom=0,
-        top='count', source=video_game_data, color="firebrick")
+        top='count', source=video_game_data, color="blue")
 
         hover = plot.select_one(HoverTool)
         hover.tooltips = [('Year', '@year'),
@@ -82,7 +82,7 @@ class Graph():
     def create_csv_graph_game_count_by_system(self):
         # game_systems = ['Wii', 'NES', '2600', '3DO', '3DS', 'DS', 'GB','X360', 'PS3', 'PS2', 'SNES', 'PS4', 'N64',
         # 'WiiU', 'XOne', 'PS', 'XB']
-        game_systems = ['GC']
+        # game_systems = ['GC']
         for game_system in game_systems:
             game_count_by_year = {}
             year = 1980 
@@ -98,10 +98,31 @@ class Graph():
                     year += 1
 
 
+    #This method will create the csv files for number of games by genre 
+    def create_csv_graph_game_count_by_genre(self):
+        genres = ['Action', 'Fighting', 'Platform', 'Racing', 'Role-Playing', 'Shooter']
+        for genre in genres:
+            game_count_by_year = {}
+            year = 1980
+            csv_file_title = genre + '.csv'
+            with open(csv_file_title, "w") as csv_file:
+                csv_writer = writer(csv_file)
+                csv_writer.writerow(["year", "count"])
+                while year < 2017:
+                    year_data_set = self.data[(self.data.Year_of_Release == year) & (self.data.Genre == genre)]
+                    count = year_data_set['Name'].count()
+                    game_count_by_year[year] = count
+                    csv_writer.writerow([year, count])
+                    year += 1
+
+
 
 
 graph = Graph()
 # graph.generate_graph_rating_world_sales()
 # graph.create_graph_game_count_by_year()
 #graph.create_csv_graph_game_count_by_system()
+# graph.create_graph_game_count_by_year()
+
+#graph.create_csv_graph_game_count_by_genre()
 graph.create_graph_game_count_by_year()

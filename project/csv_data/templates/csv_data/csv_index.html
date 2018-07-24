@@ -245,16 +245,28 @@
     <!-- The graphs here will show game count by genre -->
     <div class='select_graph_area_two'>
       <h5 class='font'>To see a graph, please select one from the menu below</h5>
-      <select id="select_graph">
-        <option value="all">Action</option>
-        <option value="all">Fighting</option>
-        <option value="all">Platform</option>
-        <option value="all">Racing</option>
-        <option value="all">Role Playing</option>
-        <option value="all">Shooter</option>
+      <select id="select_genre_graph">
+        <option value="action">Action</option>
+        <option value="fighting">Fighting</option>
+        <option value="platform">Platform</option>
+        <option value="racing">Racing</option>
+        <option value="role">Role Playing</option>
+        <option value="shooter">Shooter</option>
         
       </select>
-      <button class='font' onclick='selectGraph(); return false;'>Push To Change Graph</button>
+      <button class='font' onclick='selectGenreGraph(); return false;'>Push To Change Graph</button>
+    </div>
+
+    <div id='graphOne_genre'>
+      <div class="bk-root">
+          <div class="bk-plotdiv" id="ba372a75-e1ae-426a-836b-fae6213709bc"></div>
+      </div>
+    </div>
+
+    <div id='graphTwo_genre'>
+      <div class="bk-root">
+          <div class="bk-plotdiv" id="f2b74666-65ad-450e-acef-50a6ab57ea3a"></div>
+      </div>
     </div>
 
   </section>
@@ -341,6 +353,25 @@
       document.getElementById('graphSeventeen').style.display = "block";
     }else if (selected_graph == 'GC'){
       document.getElementById('graphEightteen').style.display = "block";
+    }
+
+  }
+
+  let reset_genre = () => {
+    document.getElementById("graphOne_genre").style.display = "none";
+    document.getElementById("graphTwo_genre").style.display = "none";
+  };
+
+  let selectGenreGraph = () => {
+
+    let selected_genre = document.getElementById('select_genre_graph').value; 
+
+    reset_genre();
+
+    if (selected_genre == "action") {
+      document.getElementById("graphOne_genre").style.display = "block";
+    }else if (selected_genre == "fighting"){
+      document.getElementById("graphTwo_genre").style.display = "block";
     }
 
   }
