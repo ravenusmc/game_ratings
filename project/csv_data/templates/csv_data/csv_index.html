@@ -269,6 +269,18 @@
       </div>
     </div>
 
+    <div id='graphThree_genre'>
+      <div class="bk-root">
+          <div class="bk-plotdiv" id="d59a0adc-c8c4-4c03-8847-5fe5a5c907f5"></div>
+      </div>
+    </div>
+
+    <div id='graphFour_genre'>
+      <div class="bk-root">
+          <div class="bk-plotdiv" id="98686c23-2c82-46de-bc95-ff7451480621"></div>
+      </div>
+    </div>
+
   </section>
   <!-- End of second graph section -->
 
@@ -360,6 +372,8 @@
   let reset_genre = () => {
     document.getElementById("graphOne_genre").style.display = "none";
     document.getElementById("graphTwo_genre").style.display = "none";
+    document.getElementById("graphThree_genre").style.display = "none";
+    document.getElementById("graphFour_genre").style.display = "none";
   };
 
   let selectGenreGraph = () => {
@@ -372,6 +386,10 @@
       document.getElementById("graphOne_genre").style.display = "block";
     }else if (selected_genre == "fighting"){
       document.getElementById("graphTwo_genre").style.display = "block";
+    }else if (selected_genre == "platform"){
+      document.getElementById("graphThree_genre").style.display = "block";
+    }else if (selected_genre == "racing"){
+      document.getElementById("graphFour_genre").style.display = "block";
     }
 
   }

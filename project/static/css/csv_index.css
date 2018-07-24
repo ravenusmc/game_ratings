@@ -92,7 +92,7 @@ Code for the graph section
   display: none;
 }
 
-#graphTwo_genre {
+#graphTwo_genre, #graphThree_genre, #graphFour_genre {
   display: none;
 }
 
