@@ -51,4 +51,34 @@ $(function() {
     $('a#max_earnings').bind('click', submit_form);
 });
 
+$(function() {
+  var availableTutorials  =  [
+     "Wii Sports",
+     "Super Mario Bros",
+     "Mario Kart Wii",
+     "Brain Age 2",
+  ];
+  $( "#automplete-1" ).autocomplete({
+     source: availableTutorials,
+     autoFocus: true,
+     minLength: 3
+  });
+});
+
+$(function() {
+
+    var submit_form = function(e) {
+        //The /_by_state is the method that you will use.
+      $.getJSON($SCRIPT_ROOT + '/_by_game_title', {
+        genre: $('#automplete-1').val()
+      }, function(data) {
+        //This is where the data will be displayed.
+        $('#automplete-1').text(data.result);
+      });
+      return false;
+    };
+    //This is what will submit the form when the user clicks the link.
+    $('a#title_rating').bind('click', submit_form);
+});
+
 

@@ -44,3 +44,11 @@ def by_max_earning():
     game_data = pd.read_csv(csv_data_file)
     game_title_max_earnings = data.get_earnings_based_genre(game_data, genre)
     return  jsonify(result = game_title_max_earnings)
+
+
+@mod.route('/_by_game_title')
+def by_title():
+    title = request.args.get('genre', 0, type=str)
+    print(title)
+    result = 'Mike'
+    return  jsonify(result = result)
