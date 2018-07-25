@@ -63,20 +63,22 @@ class Data():
     def get_critic_score_of_game(self, gameData, gameTitle):
         gameData = gameData.dropna()
         gameData = gameData[gameData.Name == gameTitle]
-        # print(gameData)
-        # print(gameData.iat[0,10])
         if gameData.empty:
             critic_score = 'No Score Found!'
         else: 
             critic_score = gameData.iat[0,10]
         return critic_score
 
+    def build_game_list(self):
+        data = pd.read_csv('./data/Video_Games_sales.csv')
+        data = data.dropna()
+        count = 0 
+        games = []
+        while count < len(data):
+            game = data.iat[count, 0]
+            games.append(game)
+            count += 1
 
-        
-
-
-#checking the datatype:
-#print(data.dtypes)
 
 
 
