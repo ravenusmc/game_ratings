@@ -60,6 +60,18 @@ class Data():
         score_sales_correlation_US = format(score_sales_correlation_US, '.2f')
         return score_sales_correlation_US
 
+    def get_critic_score_of_game(self, gameData, gameTitle):
+        gameData = gameData.dropna()
+        gameData = gameData[gameData.Name == gameTitle]
+        # print(gameData)
+        # print(gameData.iat[0,10])
+        if gameData.empty:
+            critic_score = 'No Score Found!'
+        else: 
+            critic_score = gameData.iat[0,10]
+        return critic_score
+
+
         
 
 

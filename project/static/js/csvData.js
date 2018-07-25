@@ -54,9 +54,10 @@ $(function() {
 $(function() {
   var availableTutorials  =  [
      "Wii Sports",
-     "Super Mario Bros",
+     "Super Mario Bros.",
      "Mario Kart Wii",
-     "Brain Age 2",
+     "Duck Hunt",
+     "Gran Turismo 3: A-Spec"
   ];
   $( "#automplete-1" ).autocomplete({
      source: availableTutorials,
@@ -64,6 +65,9 @@ $(function() {
      minLength: 3
   });
 });
+
+//Meetup recruiter
+// genuent
 
 $(function() {
 
@@ -73,7 +77,7 @@ $(function() {
         genre: $('#automplete-1').val()
       }, function(data) {
         //This is where the data will be displayed.
-        $('#automplete-1').text(data.result);
+        $('#title').text(data.result);
       });
       return false;
     };

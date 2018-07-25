@@ -20,7 +20,7 @@ def homepage():
         mean_game_rating = mean_game_rating, score_sales_correlation_US = score_sales_correlation_US)
 
 
-#AJAX Functions below this line 
+########## AJAX Functions below this line #################
 
 #This route will deal with getting the max rating of a video game by year and genre 
 @mod.route('/_by_max_rating')
@@ -48,7 +48,9 @@ def by_max_earning():
 
 @mod.route('/_by_game_title')
 def by_title():
-    title = request.args.get('genre', 0, type=str)
-    print(title)
-    result = 'Mike'
-    return  jsonify(result = result)
+    csv_data_file = os.path.join(mod.root_path, 'data/Video_Games_Sales.csv')
+    game_data = pd.read_csv(csv_data_file)
+    gameTitle = request.args.get('genre', 0, type=str)
+    data = Data()
+    critic_score = data.get_critic_score_of_game(game_data, gameTitle)
+    return  jsonify(result = critic_score)
