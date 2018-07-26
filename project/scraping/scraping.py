@@ -24,17 +24,6 @@ class Web_Scraping():
         except urllib.error.HTTPError as err:
             review_grades = 'No Games Found!'
             return review_grades
-        
-        
-        # review_grades = []
-        # for div in get_divs:
-        #     review_grade = div.get_text()
-        #     review_grade = review_grade.strip('\n')
-        #     if review_grade != '':
-        #         review_grade = float(review_grade)
-        #         review_grades.append(review_grade)
-        # return review_grades
-
 
     def convert_list_to_series(self, review_grades):
         score_dataFrame = pd.Series(review_grades)
