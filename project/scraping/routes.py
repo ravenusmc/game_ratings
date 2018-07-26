@@ -21,8 +21,6 @@ def scraping_homepage():
 
         review_grades = scrape.get_data_based_on_game_title(gameTitle, gameSystem)
 
-        print(review_grades)
-
         if review_grades == 'No Games Found!':
             score_mean_formatted = review_grades
             score_std_formatted = review_grades

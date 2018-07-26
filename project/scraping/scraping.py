@@ -12,10 +12,11 @@ class Web_Scraping():
         try: 
             web_byte = urlopen(req).read()
             soup = BeautifulSoup(web_byte, "html.parser")
-            get_divs = soup.find_all(class_='review_grade')
+            get_parent_div = soup.find_all(class_='critic_review')
             review_grades = []
-            for div in get_divs:
-                review_grade = div.get_text()
+            for div in get_parent_div:
+                grade = div.find(class_='review_grade')
+                review_grade = grade.get_text()
                 review_grade = review_grade.strip('\n')
                 if review_grade != '':
                     review_grade = float(review_grade)
@@ -40,11 +41,38 @@ class Web_Scraping():
         score_std = score_dataFrame.std()
         score_std_formatted = format(score_std, '.2f')
         return score_std_formatted
-
+            
 # scrape = Web_Scraping()
-# review_grades = scrape.get_data_based_on_game_title('god-of-war',  'playstation-4')
-# score_dataFrame = scrape.convert_list_to_series(review_grades)
-# score_mean_formatted = scrape.calculate_mean(score_dataFrame)
-# scrape.calculate_standard_deviation(score_dataFrame)
+# review_grades = scrape.test('god-of-war',  'playstation-4')
 
-#Need to make a bar graph of the scores. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
