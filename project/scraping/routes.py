@@ -16,6 +16,8 @@ def scraping_homepage():
         gameTitle = request.form['gameTitle']
         gameSystem = request.form['system']
 
+        game_Title = gameTitle 
+
         gameTitle = fix_String.transform_user_input_to_lowercase(gameTitle)
         gameTitle = fix_String.add_dash_in_gameTitle(gameTitle)
 
@@ -30,7 +32,7 @@ def scraping_homepage():
             score_std_formatted = scrape.calculate_standard_deviation(score_dataFrame)
 
         return render_template('scraping/scraping.html', mean = json.dumps(score_mean_formatted), 
-            std = json.dumps(score_std_formatted), scores = json.dumps(review_grades))
+            std = json.dumps(score_std_formatted), scores = json.dumps(review_grades), game_title = game_Title)
     return render_template('scraping/scraping.html')
 
 
