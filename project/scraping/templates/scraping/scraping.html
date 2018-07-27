@@ -3,6 +3,7 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/generic.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/scraping.css') }}">
+<script src="https://d3js.org/d3.v3.min.js"></script>
 
 <!-- Start of main section -->
 <main role='main'>
@@ -28,6 +29,17 @@
 
   </section>
 
+  <!-- Start of Graph area -->
+  <section id='graph_section'>
+
+    <h2>Graph of Scores</h2>
+    <div class='chart'>
+
+    </div>
+
+  </section>
+  <!-- End of Graph area -->
+
 </main>
 
 <hr class="style5">
@@ -36,13 +48,57 @@
 <!-- Vue CDN -->
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 <script type="text/javascript">
+
   
+  //Variables coming in from the web scraping that Python code took care of. 
   const mean = {{ mean|safe }}
   const std = {{ std|safe }}
-  const reviewScores = {{ scores|safe }}
+  const data = {{ scores|safe }}
 
-  console.log(reviewScores)
-  
+  ////////////// D3.JS Code /////////////////
+
+  //Variables for D3.JS 
+  const color = "steelblue";
+  const width = 500;
+  const height = 500;
+  const padding = 50;
+
+  var histogram = d3.layout.histogram()
+      .bins(7)
+      (data)
+
+  var y = d3.scale.linear()
+      .domain([0, d3.max(histogram.map(function(i){
+        return i.length;
+      }))])
+      .range([0, height])
+
+  var canvas = d3.select('.chart').append("svg")
+    .attr("width", width)
+    .attr('Height', height + padding);
+
+  var bars = canvas.selectAll(".bar")
+      .data(histogram)
+      .enter()
+      .append("g")
+
+  bars.append("rect")
+      .attr("x", function(d){
+        return d.x;
+      })
+      .attr("y", 0)
+      .attr("width", function(d){
+        return d.dx;
+      })
+      .attr("height", function(d){
+        return d.y;
+      })
+      .attr("fill", "steelblue")
+
+
+  ////////////// VUE CODE /////////////////
+
+  //Vue code to display data 
   const stat_data = new Vue({
     el: '#stat_data',
     data: {

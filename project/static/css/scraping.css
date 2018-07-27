@@ -46,3 +46,14 @@ form {
 .font-color {
   color: #f4b042;
 }
+
+/*******************************
+The below code will build the graph
+*******************************/
+
+#graph_section {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
