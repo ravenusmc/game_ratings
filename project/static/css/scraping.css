@@ -8,7 +8,6 @@ The CSS in this page will deal with the scraping.html page
 main {
   display: flex;
   flex-flow: column;
-  min-height: 65vh;
 }
 
 #form_section {
@@ -16,6 +15,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 form {
@@ -25,7 +25,6 @@ form {
   justify-content: center;
   align-items: center;
   border: 2px solid #f4b042;
-  min-height: 60vh;
   background-color: #4286f4;
   border-radius: 20px;
   padding: 10px;
@@ -52,8 +51,12 @@ The below code will build the graph
 *******************************/
 
 #graph_section {
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.chart {
+  border: 2px solid blue;
+  height: 1000px;
 }
