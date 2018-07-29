@@ -55,8 +55,3 @@ The below code will build the graph
   flex-direction: column;
   align-items: center;
 }
-
-.chart {
-  border: 2px solid blue;
-  height: 1000px;
-}
