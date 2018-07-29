@@ -19,7 +19,7 @@
         <option value='XboxOne'>Xbox One</option>
         <option value='Switch'>Switch</option>
       </select>
-      <button id='scrape_button'>Submit</button>
+      <button id='scrape_button' onclick='buildGraph(data); return false;'>Submit</button>
       <div id='stat_data'>
         <h6 class='font-color font'>Here is the data for: {{ game_title }}</h6>
         <h6 class='font-color font'>The Mean is: {% raw %}{{ mean }}{% endraw %}</h6>
@@ -32,7 +32,7 @@
   <!-- Start of Graph area -->
   <section id='graph_section'>
 
-    <h2>Graph of Scores</h2>
+    <h2 id='graphScores'>Graph of Scores</h2>
     <div class='chart'>
 
     </div>
@@ -49,7 +49,6 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 <script type="text/javascript">
 
-  
   //Variables coming in from the web scraping that Python code took care of. 
   const mean = {{ mean|safe }}
   const std = {{ std|safe }}
@@ -57,7 +56,12 @@
 
   ////////////// D3.JS Code /////////////////
 
-  //Variables for D3.JS 
+  function buildGraph (data) {
+
+    // d3.select("svg").remove();
+    document.getElementById("graphScores").style.display = "block";
+
+      //Variables for D3.JS 
   const color = "steelblue";
   const width = 500;
   const height = 500;
@@ -66,8 +70,6 @@
   var histogram = d3.layout.histogram()
       .bins(7)
       (data);
-
-  console.log(histogram);
 
   var y = d3.scale.linear()
       .domain([0, d3.max(histogram.map(function(i){ return i.length }))])
@@ -113,8 +115,10 @@
     .attr("text-anchor", "middle")
     .text(function (d) { return d.y; })
 
- 
+  }
 
+
+ 
   ////////////// VUE CODE /////////////////
 
   //Vue code to display data 

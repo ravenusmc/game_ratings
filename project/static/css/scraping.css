@@ -55,3 +55,8 @@ The below code will build the graph
   flex-direction: column;
   align-items: center;
 }
+
+
+#graphScores {
+  display: none;
+}
