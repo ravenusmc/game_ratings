@@ -30,9 +30,11 @@ def scraping_homepage():
             score_dataFrame = scrape.convert_list_to_series(review_grades)
             score_mean_formatted = scrape.calculate_mean(score_dataFrame)
             score_std_formatted = scrape.calculate_standard_deviation(score_dataFrame)
+            score_median_formatted = scrape.calculate_median(score_dataFrame)
 
         return render_template('scraping/scraping.html', mean = json.dumps(score_mean_formatted), 
-            std = json.dumps(score_std_formatted), scores = json.dumps(review_grades), game_title = game_Title)
+            std = json.dumps(score_std_formatted), scores = json.dumps(review_grades), game_title = game_Title,
+            median = json.dumps(score_median_formatted))
     return render_template('scraping/scraping.html')
 
 

@@ -37,6 +37,12 @@ class Web_Scraping():
         return score_mean_formatted
 
 
+    def calculate_median(self, score_dataFrame):
+        score_median = score_dataFrame.median()
+        score_median_formatted = format(score_median, '.2f')
+        return score_median_formatted
+
+
     def calculate_standard_deviation(self, score_dataFrame):
         score_std = score_dataFrame.std()
         score_std_formatted = format(score_std, '.2f')
