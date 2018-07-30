@@ -13,6 +13,10 @@ def homepage():
     data = Data()
     csv_data_file = os.path.join(mod.root_path, 'data/Video_Games_Sales.csv')
     game_data = pd.read_csv(csv_data_file)
+    school_shooting_data = os.path.join(mod.root_path, 'data/school_shootings.csv')
+    school_shooting_data = pd.read_csv(school_shooting_data)
+    data.create_dataframe_games_shootings(game_data, school_shooting_data)
+    
     score_sales_correlation = data.correlation_globalSales_criticScore(game_data)
     score_sales_correlation_US = data.correlation_USSales_criticScore(game_data)
     mean_game_rating = data.average_game_rating(game_data)

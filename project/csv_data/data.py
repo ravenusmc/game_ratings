@@ -79,6 +79,20 @@ class Data():
             games.append(game)
             count += 1
 
+    def create_csv_games_shootings(self, game_data, school_shooting_data):
+        rating_data = game_data[game_data.Rating == "M"]
+        year = 1980
+        while year < 2017:
+            rating_data_year = rating_data[rating_data.Year_of_Release == year]
+            count_of_games = rating_data_year['Name'].count()
+
+            year += 1
+
+
+
+
+
+
 
 
 

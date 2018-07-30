@@ -116,9 +116,11 @@ class Graph():
                     year += 1
 
 
+                
 
 
-graph = Graph()
+
+# graph = Graph()
 # graph.generate_graph_rating_world_sales()
 # graph.create_graph_game_count_by_year()
 #graph.create_csv_graph_game_count_by_system()

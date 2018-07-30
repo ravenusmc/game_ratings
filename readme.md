@@ -5,6 +5,8 @@ This project should end up having two main parts. The first part will analyze vi
 
 As stated, the data may be found at Kaggle at the following link: https://www.kaggle.com/gregorut/videogamesales
 
+The school shooting data came from the Washington Post's github repo and may be found at the following link: https://github.com/washingtonpost/data-school-shootings
+
 
 # Getting started
 ### Installing
