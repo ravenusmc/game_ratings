@@ -1,5 +1,6 @@
 from flask import Blueprint, Flask, session, jsonify, redirect, url_for, escape, render_template, request, flash
 from project.csv_data.data import * 
+#from project.csv_data.graph2 import *
 import numpy as np
 import pandas as pd
 import os 
@@ -10,12 +11,16 @@ mod = Blueprint('csv_data', __name__,template_folder='templates', static_folder=
 
 @mod.route('/csv_home')
 def homepage():
+    #Creating ojects
     data = Data()
+
     csv_data_file = os.path.join(mod.root_path, 'data/Video_Games_Sales.csv')
     game_data = pd.read_csv(csv_data_file)
-    school_shooting_data = os.path.join(mod.root_path, 'data/school_shootings.csv')
-    school_shooting_data = pd.read_csv(school_shooting_data)
-    data.create_dataframe_games_shootings(game_data, school_shooting_data)
+    # school_shooting_data = os.path.join(mod.root_path, 'data/school_shootings.csv')
+    # school_shooting_data = pd.read_csv(school_shooting_data)
+
+    years, shootings, game_ratings = data.create_dataframe_games_shootings(game_data, school_shooting_data)
+    create_Graph.create_shooting_rating_graph(years, game_ratings, shootings)
     
     score_sales_correlation = data.correlation_globalSales_criticScore(game_data)
     score_sales_correlation_US = data.correlation_USSales_criticScore(game_data)

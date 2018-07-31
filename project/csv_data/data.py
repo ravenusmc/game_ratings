@@ -82,12 +82,20 @@ class Data():
     def create_dataframe_games_shootings(self, game_data, school_shooting_data):
         rating_data = game_data[game_data.Rating == "M"]
         year = 1980
-        print(year)
+        years = []
+        shootings = []
+        game_ratings = []
         while year < 2017:
-        #     rating_data_year = rating_data[rating_data.Year_of_Release == year]
-        #     count_of_games = rating_data_year['Name'].count()
-
+            rating_data_year = rating_data[rating_data.Year_of_Release == year]
+            count_of_games = rating_data_year['Name'].count()
+            shootings_by_year = school_shooting_data[school_shooting_data.year == year]
+            count_of_shootings = shootings_by_year['school_name'].count()
+            years.append(year)
+            shootings.append(count_of_shootings)
+            game_ratings.append(count_of_games)
             year += 1
+        return years, shootings, game_ratings
+
 
 
 
