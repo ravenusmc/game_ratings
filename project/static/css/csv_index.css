@@ -4,6 +4,10 @@
 Generic CSS
 ************************/
 
+* {
+    box-sizing: border-box;
+}
+
 .center {
   text-align: center;
 }
@@ -18,9 +22,10 @@ header {
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
-  background-image: url('../img/arcade.jpeg');
+  background-image: url('../img/arcade2.jpg');
   background-size: cover;
   height: 500px;
+  width: 100%;
 }
 
 header > div {
