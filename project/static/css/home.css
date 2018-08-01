@@ -2,7 +2,7 @@
 
 main {
   display: grid;
-  grid-gap: 1em;
+  grid-gap: .5em;
   grid-template-columns: 1fr 1fr;
   position:fixed;
   padding: 0;
@@ -22,10 +22,10 @@ main {
   align-items: center;
 }
 
-.picture_one:hover {
+/*.picture_one:hover {
   box-shadow: 10px 15px #4286f4;
   height: 650px;
-}
+}*/
 
 .picture_two {
   background-image: url('../img/ps4.jpg');
@@ -38,10 +38,10 @@ main {
   justify-content: center;
 }
 
-.picture_two:hover {
+/*.picture_two:hover {
   box-shadow: 10px 15px #4286f4;
   height: 650px;
-}
+}*/
 
 .div_styling {
   border: 2px solid #4286f4;

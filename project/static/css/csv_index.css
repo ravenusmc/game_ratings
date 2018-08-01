@@ -116,6 +116,22 @@ Code for the graph section
   margin-top: -10px;
 }
 
+/***********************
+Code for the Third Graph section 
+************************/
+
+#thrid_graph_section {
+  display 
+}
+
+.third_graph {
+  height: 600px;
+  width: 600px;
+  background-image: url('../img/ratings.png');
+  background-size: cover;
+  background-position: center;
+}
+
 
 /***********************
 Media Query Code
