@@ -121,15 +121,17 @@ Code for the Third Graph section
 ************************/
 
 #thrid_graph_section {
-  display 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .third_graph {
   height: 600px;
-  width: 600px;
+  width: 800px;
   background-image: url('../img/ratings.png');
   background-size: cover;
-  background-position: center;
 }
 
 
@@ -154,6 +156,14 @@ Media Query Code
   }
 
   .graph_section {
+    display: none;
+  }
+
+  #graph_section_two {
+    display: none;
+  }
+
+  #graph_section_three {
     display: none;
   }
 
