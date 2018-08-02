@@ -62,6 +62,7 @@ Code for the simple query section
   grid-gap: 2em;
   grid-template-areas:
   "one two three";
+  justify-items: center;
 }
 
 .box1 {
@@ -161,6 +162,18 @@ Media Query Code
     "one"
     "two"
     "three";
+  }
+
+  .box1 {
+    text-align: center;
+  }
+
+  .box2 {
+    text-align: center;
+  }
+
+  .box3 {
+    text-align: center;
   }
 
   .graph_section {
