@@ -140,9 +140,9 @@ Code for the graph section
 Code for the Third Graph section 
 ************************/
 
-#thrid_graph_section {
+#graph_section_three {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -152,6 +152,11 @@ Code for the Third Graph section
   width: 800px;
   background-image: url('../img/ratings.png');
   background-size: cover;
+}
+
+.paragraph {
+  width: 700px;
+  font-size: 20px;
 }
 
 
