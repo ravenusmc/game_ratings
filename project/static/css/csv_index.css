@@ -58,7 +58,7 @@ Code for the simple query section
 ************************/
 .simple_query_section {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(minmax(300px, 1fr));
   grid-gap: 2em;
   grid-template-areas:
   ". one two three .";
@@ -74,7 +74,6 @@ Code for the simple query section
   padding: 10px;
   border-radius: 12px;
   background-color: rgb(244, 176, 66);
-  width: 300px;
 }
 
 .box1 {
@@ -88,6 +87,7 @@ Code for the simple query section
 
 .box3 {
   grid-area: three;
+  text-align: center;
 }
 
 /***********************
