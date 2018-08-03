@@ -7,18 +7,16 @@ The code in this file will deal with the base.html CSS
 The Code here will deal with the nav bar
 *************************/
 
-nav {
-  border: 2px solid black;
-  border-radius: 10px;
+/*nav {
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #4286f4;
   height: 100px;
-}
+}*/
 
-ul {
+/*ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -28,6 +26,7 @@ ul {
   margin-top: 20px;
 }
 
+
 li a {
   color: #f4b042;
 }
@@ -35,6 +34,10 @@ li a {
 li a:hover {
   color: #86f442;
   text-decoration: none;
+}*/
+
+.color {
+  color: #f4b042;
 }
 
 /************************
