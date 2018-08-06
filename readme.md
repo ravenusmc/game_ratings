@@ -33,6 +33,8 @@ website.
 # Issues / Other
 The web scraping is working although there seems to be a slight issue with some of the value that are returned. I almost believe that this is an issue with Metacritic but I'll be looking into it more. It appears that some ratings on metacritic will change from time to time. I believe that I've fixed this issue. Metacritic placed user scores on their professional critics page so once I realized that I fixed this problem...I hope! 
 
+The only 'somewhat' problem is that I'm using the csv data to help with autocomplete on the scraping.html page. This works for some games but Metacritic has to have their game typed a particular way. Thus Halo 5 cannot be Halo 5 or Halo 5: guardians but Halo 5 guardians. I'm still wondering if there is a way I could possibly fix this. 
+
 
 # Preview
 

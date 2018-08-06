@@ -24,7 +24,7 @@ class Web_Scraping():
                     review_grades.append(review_grade)
             return review_grades
         except urllib.error.HTTPError as err:
-            review_grades = 'No Games Found!'
+            review_grades = 'No Data Found!'
             return review_grades
 
     def convert_list_to_series(self, review_grades):
