@@ -12,7 +12,7 @@
 
     <form method='POST'>
       <i class="fa fa-gamepad fa-5x" aria-hidden="true"></i>
-      <label class='font-color font font_size'>Please Enter Game Title:</label><input name='gameTitle' required>
+      <label class='font-color font font_size'>Please Enter Game Title:</label><input id="automplete-2" name='gameTitle' required>
       <label class='font-color font'>Please Select the Game System:</label>
       <select name='system'>
         <option value='playstation-4'>PS 4</option>
@@ -47,6 +47,7 @@
 <!-- End of main section -->
 
 <!-- Vue CDN -->
+<script src='{{ url_for('static', filename='js/scraping.js') }}'></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 <script type="text/javascript">
 
