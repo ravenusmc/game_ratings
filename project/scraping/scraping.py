@@ -8,6 +8,7 @@ class Web_Scraping():
 
     def get_data_based_on_game_title(self, gameTitle, gameSystem):
         url = "http://www.metacritic.com/game/" + gameSystem + '/' + gameTitle + '/critic-reviews'
+        print(url)
         req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
         try: 
             web_byte = urlopen(req).read()
@@ -48,10 +49,6 @@ class Web_Scraping():
         score_std_formatted = format(score_std, '.2f')
         return score_std_formatted
             
-# scrape = Web_Scraping()
-# review_grades = scrape.test('god-of-war',  'playstation-4')
-
-
 
 
 

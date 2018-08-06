@@ -16,7 +16,7 @@
       <label class='font-color font'>Please Select the Game System:</label>
       <select name='system'>
         <option value='playstation-4'>PS 4</option>
-        <option value='XboxOne'>Xbox One</option>
+        <option value='xbox-one'>Xbox One</option>
         <option value='Switch'>Switch</option>
       </select>
       <button id='scrape_button'>Submit</button>
@@ -58,7 +58,6 @@
 
 
   ////////////// D3.JS Code /////////////////
-
 
   //Variables for D3.JS 
   const color = "steelblue";
@@ -121,8 +120,6 @@
     .attr("fill", '#fff')
     .attr("text-anchor", "middle")
     .text(function (d) { return d.y; })
-
-
 
  
   ////////////// VUE CODE /////////////////
