@@ -38,6 +38,6 @@ The only 'somewhat' problem is that I'm using the csv data to help with autocomp
 
 # Preview
 
-To see a video that talks about this project please go here: COMING SOON
+To see a video that talks about this project please go here: https://www.youtube.com/watch?v=uudSTKVpxSk
 
-Blog entry: COMING SOON
+Blog entry: https://codingsaga.wordpress.com/2018/08/10/game-ratings-again/
